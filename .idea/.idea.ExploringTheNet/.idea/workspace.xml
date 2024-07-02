@@ -18,10 +18,7 @@
       <change afterPath="$PROJECT_DIR$/src/SessionOne/AppClass/RunAppClass.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/SessionOne/AppInterface/AppShape.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/SessionOne/AppInterface/RunAppInterface.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ExploringTheNet/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ExploringTheNet/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ExploringTheNet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ExploringTheNet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExploringTheNet.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ExploringTheNet.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SessionOne/MyClass/Animal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SessionOne/AppClass/Animal.cs" afterDir="false" />
     </list>
@@ -43,6 +40,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3f1f4402a25a494bb02dd8beeca5cb8fd82000/81/e015f8d4/Math.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3f1f4402a25a494bb02dd8beeca5cb8fd82000/9a/f8bb483f/ArgumentOutOfRangeException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3f1f4402a25a494bb02dd8beeca5cb8fd82000/f0/cb63fe65/String.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/yk/RiderProjects/ExploringTheNet/Program.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -74,7 +72,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.gutterIcons",
+    "settings.editor.selected.configurable": "configurable.group.build",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -214,6 +212,7 @@
       <workItem from="1719830527705" duration="120000" />
       <workItem from="1719844129342" duration="1095000" />
       <workItem from="1719845240699" duration="2704000" />
+      <workItem from="1719879186246" duration="7114000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize empty console app">
       <option name="closed" value="true" />
@@ -271,7 +270,31 @@
       <option name="project" value="LOCAL" />
       <updated>1719803102575</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Include src folder">
+      <option name="closed" value="true" />
+      <created>1719879229199</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1719879229199</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Remove resharper rule">
+      <option name="closed" value="true" />
+      <created>1719879248867</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1719879248867</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Auto generated">
+      <option name="closed" value="true" />
+      <created>1719879262359</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1719879262359</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,6 +322,9 @@
     <MESSAGE value="Auto change" />
     <MESSAGE value="Add new Animal class" />
     <MESSAGE value="Delete file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Delete file" />
+    <MESSAGE value="Include src folder" />
+    <MESSAGE value="Remove resharper rule" />
+    <MESSAGE value="Auto generated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Auto generated" />
   </component>
 </project>
