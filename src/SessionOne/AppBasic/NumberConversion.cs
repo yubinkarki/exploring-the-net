@@ -2,7 +2,7 @@ namespace ExploringTheNet.SessionOne.AppBasic;
 
 using System;
 
-public class NumberConversion {
+public static class NumberConversion {
     public static void Run() {
         int numOne = 10;
         short numFour = 0;
