@@ -19,4 +19,4 @@ riderModule.iml
 .idea/**/aws.xml
 
 # Generated files
-.idea/**/contentModel.xml
+/.idea/
