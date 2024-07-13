@@ -6,7 +6,7 @@ Part of the **DotNet Technology** course for BCA 5th semester.
 ## Units
 
 -   [Unit 1 - Introducing C# and the .NET Framework](#unit-1---introducing-c-and-the-net-framework)
--   [Unit 2 - The C# Language Basics](#unit-2---introduction-to-android-programming)
+-   [Unit 2 - The C# Language Basics](#unit-2---the-c-language-basics)
 -   [Unit 3 - Creating Types in C#](#unit-3---designing-the-ui)
 -   [Unit 4 - Advanced C#](#unit-4---android-activity)
 
