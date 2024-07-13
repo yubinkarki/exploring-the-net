@@ -1,6 +1,6 @@
-using System;
-
 namespace ExploringTheNet.SessionOne.AppBasic;
+
+using System;
 
 public static class RunAppBasic {
     public static void RunBaseType() {
