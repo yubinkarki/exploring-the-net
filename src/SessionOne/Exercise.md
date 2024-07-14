@@ -19,3 +19,14 @@ Write to the console the following message:
 but this {trademark} is interpreted literally."
 Where copyright is dynamic and trademark should be interpreted as is.
 ```
+
+### Type-testing with the 'is' operator
+
+```
+Create two different empty classes Teacher and Student. 
+Created a method that takes an argument of type object.
+Use conditional logic to check if the object is of type Teacher or Student.
+Print appropriate message to the console for Teacher, Student and neither cases.
+
+Hint: 'nameof' method can be used to get the name of the data.
+```
