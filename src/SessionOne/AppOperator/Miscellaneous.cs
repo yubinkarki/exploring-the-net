@@ -10,7 +10,11 @@ public class User {
     }
 }
 
-public class Theme { }
+public class Theme {
+    public void ShowInfo() {
+        System.Console.WriteLine($"This is inside Theme");
+    }
+}
 
 public static class Miscellaneous {
     public static unsafe void Run() {
@@ -42,14 +46,14 @@ public static class Miscellaneous {
             john.ShowInfo();
         }
 
-        object? planet = null;
-        string mercury = planet as string;
+        object? planet = "Venus";
+        string mercury = planet as string ?? "Earth";
 
-        System.Console.WriteLine($"mercury = {mercury}");
+        System.Console.WriteLine($"\nmercury = {mercury}");
 
         int maxResult = Max(a: 20, b: 20);
 
-        System.Console.WriteLine($"Max is {maxResult}");
+        System.Console.WriteLine($"\nMax is {maxResult}");
     }
 
     private static int Max(int a, int b) {
