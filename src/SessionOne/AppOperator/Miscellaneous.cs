@@ -24,7 +24,7 @@ public static class Miscellaneous {
         int floatSize = sizeof(float);
         int doubleSize = sizeof(double);
 
-        int* yearPtr = &year; // Creating a pointer to an int
+        int* yearPtr = &year; // Creating a pointer
 
         System.Console.WriteLine(
             $"sizeof(int) = {intSize}\n" +
@@ -42,21 +42,21 @@ public static class Miscellaneous {
         User john = new User();
 
         if (john is User) {
-            System.Console.WriteLine();
+            System.Console.WriteLine($"\ntype of john is {typeof(User)}");
             john.ShowInfo();
         }
 
-        object? planet = "Venus";
+        object? planet = 11;
         string mercury = planet as string ?? "Earth";
 
-        System.Console.WriteLine($"\nmercury = {mercury}");
+        System.Console.WriteLine($"\nmercury = {mercury} \t type of mercury = {mercury.GetType()}");
 
-        int maxResult = Max(a: 20, b: 20);
+        int maxResult = CheckMax(a: 20, b: 20);
 
         System.Console.WriteLine($"\nMax is {maxResult}");
     }
-
-    private static int Max(int a, int b) {
+  
+    private static int CheckMax(int a, int b) {
         return a > b ? a : b;
     }
 }
