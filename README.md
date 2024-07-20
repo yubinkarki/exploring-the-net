@@ -1,7 +1,7 @@
 ## [Exploring The Net](https://yubinkarki.notion.site/DotNet-Technology-d680949c8c4c41d69bbef87ea84a4354)
 
-This is a simple .NET console application comprising various core concepts.  
-Part of the **DotNet Technology** course for BCA 5th semester.
+This is a simple .NET console application comprising various core concepts  
+Part of the **DotNet Technology** course for BCA 5th semester  
 
 ## Units
 
@@ -55,4 +55,39 @@ Identifiers, Keywords, and Literals
 Value types vs Reference types
 Operators and Parameters
 Control flow statements and Namespaces
+```
+
+## Unit 3 - Creating Types in C#
+
+C# is a strongly typed language  
+Every variable and constant has a type, as does every expression that evaluates to a value  
+Every method declaration specifies a name, the type for each input parameter and for the return value  
+The .NET class library defines built-in numeric types and complex types that represent a wide variety of constructs  
+
+### Unit Coverage
+
+```
+Constructor/Destructor
+Static classes, Finalizers, Struct
+Inheritance and Interface
+Upcasting/Downcasting, Operator Overloading
+Sealed functions and classes
+Enums and Generics
+```
+
+## Unit 4 - Advanced C#
+
+.NET is a developer platform made up of tools, programming languages, and libraries  
+The base platform provides components that apply to all different types of apps  
+Additional frameworks, such as ASP.NET, extend .NET with components for building specific types of apps  
+
+### Unit Coverage
+
+```
+Delegates, Events
+Lambda expressions
+Exception Handling
+Introduction to LINQ
+Working with database
+Web app using ASP.NET
 ```
