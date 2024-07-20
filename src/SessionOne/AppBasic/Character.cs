@@ -11,10 +11,16 @@ public static class Character {
         string directoryPath = @"src\SessionOne\AppBasic\Character.cs";
 
         string fullName = firstName + lastName;
-        int result = firstName.CompareTo(lastName);
+        bool resultName = firstName == lastName;
 
-        Console.WriteLine($"{trademark} {copyright} Full name is {fullName}");
+        Console.WriteLine(firstName.CompareTo(lastName));
+
+        if (firstName.CompareTo(lastName) == 0) {
+            Console.WriteLine("First name is equal to last name");
+        }
+
+        Console.WriteLine($"Full name {copyright} is {fullName} {trademark}");
         Console.WriteLine("Current directory is " + directoryPath);
-        Console.WriteLine($"Comparison result is {result}");
+        Console.WriteLine($"Comparison result is {resultName}");
     }
 }
