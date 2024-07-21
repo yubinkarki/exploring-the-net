@@ -4,17 +4,19 @@ using System;
 
 public static class Character {
     public static void Run() {
+        int numOne = 10;
         char copyright = '\u00A9';
         char trademark = '\u2122';
         string lastName = "Karki";
         string firstName = "Yubin";
         string directoryPath = @"src\SessionOne\AppBasic\Character.cs";
 
-        string fullName = firstName + lastName;
+        string fullName = firstName + " " + lastName + " " + numOne;
         bool resultName = firstName == lastName;
 
-        Console.WriteLine(firstName.CompareTo(lastName));
+        Console.WriteLine("Result of comparison " + firstName.CompareTo(lastName));
 
+        // firstName is larger/smaller/equal - 1/-1/0
         if (firstName.CompareTo(lastName) == 0) {
             Console.WriteLine("First name is equal to last name");
         }
