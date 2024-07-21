@@ -1,18 +1,22 @@
 namespace ExploringTheNet.SessionOne.AppOperator;
 
 public class User {
-    private const int Age = 30;
-    private const bool IsMarried = true;
-    private const string Name = "John Doe";
+    private const int _age = 30;
+    private const bool _isMarried = true;
+
+    public string? Name { get; set; }
+    public Address? Address { get; set; }
 
     public void ShowInfo() {
-        System.Console.WriteLine($"Name: {Name}\nAge: {Age}\nIsMarried: {IsMarried}");
+        System.Console.WriteLine($"Name: {Name}\nAge: {_age}\nIsMarried: {_isMarried}");
     }
 }
 
-public class Theme {
+public class Address {
+    public string? Street { get; set; }
+
     public void ShowInfo() {
-        System.Console.WriteLine($"This is inside Theme");
+        System.Console.WriteLine($"This is inside Address");
     }
 }
 
@@ -41,12 +45,13 @@ public static class Miscellaneous {
 
         User john = new User();
 
+        // Exercise 1
         if (john is User) {
             System.Console.WriteLine($"\ntype of john is {typeof(User)}");
             john.ShowInfo();
         }
 
-        object? planet = 11;
+        object? planet = null;
         string mercury = planet as string ?? "Earth";
 
         System.Console.WriteLine($"\nmercury = {mercury} \t type of mercury = {mercury.GetType()}");
@@ -55,7 +60,8 @@ public static class Miscellaneous {
 
         System.Console.WriteLine($"\nMax is {maxResult}");
     }
-  
+
+    // Exercise 2
     private static int CheckMax(int a, int b) {
         return a > b ? a : b;
     }

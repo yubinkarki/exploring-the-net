@@ -16,4 +16,8 @@ public static class RunAppOperator {
     public static void RunMiscellaneous() {
         Miscellaneous.Run();
     }
+
+    public static void RunElvisPresley() {
+        ElvisPresley.Run();
+    }
 }
