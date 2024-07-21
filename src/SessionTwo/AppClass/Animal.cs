@@ -1,4 +1,4 @@
-namespace ExploringTheNet.SessionOne.AppClass;
+namespace ExploringTheNet.SessionTwo.AppClass;
 
 using System;
 
