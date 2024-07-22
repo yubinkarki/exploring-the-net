@@ -16,7 +16,7 @@ public static class Character {
 
         Console.WriteLine("Result of comparison " + firstName.CompareTo(lastName));
 
-        // firstName is larger/smaller/equal - 1/-1/0
+        // firstName is larger/smaller/equal => 1/-1/0
         if (firstName.CompareTo(lastName) == 0) {
             Console.WriteLine("First name is equal to last name");
         }
