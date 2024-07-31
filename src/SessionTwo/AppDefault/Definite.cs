@@ -28,7 +28,7 @@ public static class Definite {
         Console.WriteLine($"Old number is {point}");
     }
 
-    private static void AddTwoNumbers(int a, int? b = 1) {
+    private static void AddTwoNumbers(int a, int b = 1) {
         Console.WriteLine("Sum is " + a + b);
     }
 

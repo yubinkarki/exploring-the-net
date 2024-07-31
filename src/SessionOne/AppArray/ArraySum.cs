@@ -10,8 +10,9 @@ public static class ArraySum {
         Console.Write("Enter the number of elements (5 max): ");
         string totalNumberInput = Console.ReadLine() ?? string.Empty;
 
+        // Handle more than max number case
         if (!int.TryParse(totalNumberInput, out totalNumber)) {
-            Console.WriteLine("\n❌ Invalid input. Please enter a number and try again.");
+            Console.WriteLine("\n❌ Invalid input. Please enter a valid number.");
             return;
         }
 
