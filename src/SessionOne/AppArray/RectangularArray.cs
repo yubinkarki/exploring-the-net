@@ -26,6 +26,6 @@ public static class RectangularArray {
             Console.WriteLine();
         }
 
-        // Exercise 3
+        // Exercise 1.3
     }
 }
