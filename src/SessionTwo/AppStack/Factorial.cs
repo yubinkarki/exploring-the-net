@@ -21,11 +21,11 @@ public class Factorial {
     private static void BuildString() {
         StringBuilder name = new StringBuilder("John");
         Console.WriteLine(name);
-        // The StringBuilder referenced by name is now eligible for GC
+        // name is now eligible for GC
 
         StringBuilder address = new StringBuilder("London");
         StringBuilder street = address;
-        // The StringBuilder referenced by address is not yet eligible for GC
+        // address is not yet eligible for GC
 
         Console.WriteLine(street);
     }

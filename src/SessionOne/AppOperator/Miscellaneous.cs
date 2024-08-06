@@ -45,7 +45,7 @@ public static class Miscellaneous {
 
         User john = new User();
 
-        // Exercise 1
+        // Exercise 1.1
         if (john is User) {
             System.Console.WriteLine($"\ntype of john is {typeof(User)}");
             john.ShowInfo();
@@ -61,7 +61,7 @@ public static class Miscellaneous {
         System.Console.WriteLine($"\nMax is {maxResult}");
     }
 
-    // Exercise 2
+    // Exercise 1.2
     private static int CheckMax(int a, int b) {
         return a > b ? a : b;
     }

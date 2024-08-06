@@ -4,12 +4,12 @@ using System;
 
 public static class Param {
     public static void Run() {
-        int point = 10;
+        int mainNumber = 10;
 
         AddNumber(1, 2);
 
-        IncrementByOne(point);
-        Console.WriteLine($"Old number is {point}");
+        IncrementByOne(ref mainNumber);
+        Console.WriteLine($"Old number is {mainNumber}");
 
         JumbleNumbers(5, 6, out int numOne, out int numTwo);
         // Exercise 2.1
@@ -27,7 +27,7 @@ public static class Param {
     }
 
     // Pass by reference
-    private static void IncrementByOne(int num) {
+    private static void IncrementByOne(ref int num) {
         num += 1;
         Console.WriteLine($"New number is {num}");
     }
