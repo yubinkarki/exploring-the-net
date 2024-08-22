@@ -1,12 +1,13 @@
-// Selection statements: if and switch
+// Selection statements choose different paths of execution: if and switch
 namespace ExploringTheNet.SessionTwo.AppControl;
 
 using System;
 
 public static class Selection {
     public static void Run() {
-        bool isLoggedIn = true;
+        uint number = 20;
         bool isActive = true;
+        bool isLoggedIn = true;
         int i = 25, j = 20, k = 30;
 
         // Nested if
@@ -27,6 +28,21 @@ public static class Selection {
             Console.WriteLine("i < j");
         } else {
             Console.WriteLine("Invalid number");
+        }
+
+        switch (number) {
+            case 1:
+                Console.WriteLine("The number is one");
+                break;
+            case 2:
+                Console.WriteLine("The number is two");
+                break;
+            case 3:
+                Console.WriteLine("The number is three");
+                break;
+            default:
+                Console.WriteLine("Unknown number");
+                break;
         }
     }
 }

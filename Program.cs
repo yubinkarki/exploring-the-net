@@ -1,11 +1,18 @@
-﻿using System;
+﻿namespace ExploringTheNet;
+
+using System;
 
 using ExploringTheNet.Constant;
-using ExploringTheNet.SessionOne.AppBasic;
-using ExploringTheNet.SessionOne.AppClass;
-using ExploringTheNet.SessionOne.AppInterface;
 
-namespace ExploringTheNet;
+using ExploringTheNet.SessionOne.AppBasic;
+using ExploringTheNet.SessionOne.AppArray;
+using ExploringTheNet.SessionOne.AppOperator;
+
+using ExploringTheNet.SessionTwo.AppClass;
+using ExploringTheNet.SessionTwo.AppStack;
+using ExploringTheNet.SessionTwo.AppDefault;
+using ExploringTheNet.SessionTwo.AppControl;
+using ExploringTheNet.SessionTwo.AppInterface;
 
 internal static class Program {
     private static void Main(string[] args) {
@@ -15,7 +22,7 @@ internal static class Program {
         } else {
             const string message = AppString.RunWithoutArgument;
             Console.WriteLine($"{message}\n");
-            RunAppBasic.RunBaseType();
+            RunAppControl.RunJump();
         }
     }
 }
