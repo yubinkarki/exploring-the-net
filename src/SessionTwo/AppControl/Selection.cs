@@ -1,4 +1,5 @@
 // Selection statements choose different paths of execution: if and switch
+
 namespace ExploringTheNet.SessionTwo.AppControl;
 
 using System;
