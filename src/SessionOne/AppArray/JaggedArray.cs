@@ -11,8 +11,8 @@ public static class JaggedArray {
         };
 
         char[][] letters = {
-            new char[]{ 'a', 'e', 'i', 'o', 'u' },
-            new char[]{ 'b', 'c' },
+            new char[] { 'a', 'e', 'i', 'o', 'u' },
+            new char[] { 'b', 'c' },
         };
 
         Console.WriteLine("Elements in numbers list:");

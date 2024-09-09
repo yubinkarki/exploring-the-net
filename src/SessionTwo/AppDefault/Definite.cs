@@ -1,4 +1,5 @@
 // Definite assignment policy
+
 namespace ExploringTheNet.SessionTwo.AppDefault;
 
 using System;

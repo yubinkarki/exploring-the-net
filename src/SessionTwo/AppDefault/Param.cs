@@ -6,22 +6,23 @@ public static class Param {
     public static void Run() {
         int mainNumber = 10;
 
-        AddNumber(1, 2);
+        AddNumber(numOne: 1);
 
         IncrementByOne(ref mainNumber);
         Console.WriteLine($"Old number is {mainNumber}");
 
-        JumbleNumbers(5, 6, out int numOne, out int numTwo);
+        JumbleNumbers(a: 5, b: 6, out int numOne, out int numTwo);
+
         // Exercise 2.1
 
-        Console.WriteLine($"Sum of params = {MajorSum(1, 1, 1, 1)}");
+        Console.WriteLine($"Sum of params = {MajorSum(1, 1, 1, 1)}\n");
 
         // Exercise 2.2
-        // MajorMultiplication(1, 1, 2, 2, 5, 6, 6, 10);
+        MajorMultiplication(6, 1, 2, 3, 4, 5, 6);
     }
 
     // Pass by value
-    private static void AddNumber(int numOne, int numTwo) {
+    private static void AddNumber(int numOne, int numTwo = 10) {
         int result = numOne + numTwo;
         Console.WriteLine("Sum = " + result);
     }
@@ -34,7 +35,8 @@ public static class Param {
 
     // Out param modifier
     private static bool JumbleNumbers(int a, int b, out int x, out int y) {
-        x = a; y = b;
+        x = b;
+        y = a;
         return true;
     }
 
@@ -58,6 +60,7 @@ public static class Param {
             for (int j = 0; j < result.GetLength(1); j++) {
                 Console.Write(result[i, j] + " ");
             }
+
             Console.WriteLine();
         }
     }

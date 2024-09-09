@@ -20,7 +20,7 @@ internal static class Program {
         } else {
             const string message = AppString.RunWithoutArgument;
             Console.WriteLine($"{message}\n");
-            RunAppControl.RunJump();
+            RunAppControl.RunIteration();
         }
     }
 }

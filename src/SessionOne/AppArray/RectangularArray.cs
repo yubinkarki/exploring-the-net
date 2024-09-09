@@ -23,6 +23,7 @@ public static class RectangularArray {
             for (int j = 0; j < numbers.GetLength(1); j++) {
                 Console.Write(numbers[i, j] + " ");
             }
+
             Console.WriteLine();
         }
 
