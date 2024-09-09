@@ -1,11 +1,16 @@
-namespace ExploringTheNet.SessionTwo.AppClass;
+namespace ExploringTheNet.SessionThree.AppClass;
 
 using System;
 
 public class Animal {
-    private readonly uint _age;
+    private uint _age;
     private readonly string _name;
     private readonly string _species;
+
+    public uint Age {
+        get { return _age; }
+        set { _age = value; }
+    }
 
     public Animal(string name, uint age, string species) {
         _age = age;

@@ -1,10 +1,14 @@
-namespace ExploringTheNet.SessionTwo.AppClass;
+namespace ExploringTheNet.SessionThree.AppClass;
 
 using System;
 
 public static class RunAppClass {
     public static void RunAnimal() {
-        Animal dog = new(name: "Golden", age: 0, species: "Nice");
+        Animal dog = new Animal(name: "Golden", age: 0, species: "Nice");
+
+        Console.WriteLine($"Dog was {dog.Age} years old");
+        dog.Age = 10;
+        Console.WriteLine($"Dog is {dog.Age} years old after update\n");
         dog.AnimalDetails();
         dog.MakeSound();
     }

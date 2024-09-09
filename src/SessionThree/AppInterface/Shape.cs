@@ -1,4 +1,4 @@
-namespace ExploringTheNet.SessionTwo.AppInterface;
+namespace ExploringTheNet.SessionThree.AppInterface;
 
 using System;
 

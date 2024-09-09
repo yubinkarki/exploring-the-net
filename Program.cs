@@ -5,12 +5,12 @@ using System;
 using ExploringTheNet.Constant;
 using ExploringTheNet.SessionOne.AppBasic;
 using ExploringTheNet.SessionOne.AppArray;
-using ExploringTheNet.SessionTwo.AppClass;
 using ExploringTheNet.SessionTwo.AppStack;
+using ExploringTheNet.SessionThree.AppClass;
 using ExploringTheNet.SessionTwo.AppDefault;
 using ExploringTheNet.SessionTwo.AppControl;
 using ExploringTheNet.SessionOne.AppOperator;
-using ExploringTheNet.SessionTwo.AppInterface;
+using ExploringTheNet.SessionThree.AppInterface;
 
 internal static class Program {
     private static void Main(string[] args) {
@@ -20,7 +20,7 @@ internal static class Program {
         } else {
             const string message = AppString.RunWithoutArgument;
             Console.WriteLine($"{message}\n");
-            RunAppControl.RunIteration();
+            RunAppClass.RunAnimal();
         }
     }
 }
