@@ -1,18 +1,29 @@
-namespace ExploringTheNet.SessionThree.AppClass;
+namespace ExploringTheNet.SessionThree.AppClass {
+    using System;
 
-using System;
+    public class Music {
+        // Member properties with get and set accessors
+        public string? Title { get; set; }
+        public string? Genre { get; set; }
+        public string? Artist { get; set; }
 
-public class Music {
-    public string? Title { get; set; }
-    public string? Genre { get; set; }
-    public string? Artist { get; set; }
+        // Default (Nullary) constructor
+        public Music() { }
 
-    public void ShowInfo() {
-        Console.WriteLine("Music Information:");
-        Console.WriteLine(
-            $"Title: {Title?.Trim()} | Type: {Title?.GetType().Name ?? "Unknown"}\n" +
-            $"Genre: {Genre?.Trim()} | Type: {Genre?.GetType().Name ?? "Unknown"}\n" +
-            $"Artist: {Artist?.Trim()} | Type: {Artist?.GetType().Name ?? "Unknown"}"
-        );
+        // Method to get the album information
+        public void ShowInfo() {
+            Console.WriteLine("Music Information:");
+            Console.WriteLine(
+                $"Title: {Title?.Trim() ?? "N/A"} | Type: {Title?.GetType().Name ?? "Unknown"}\n" +
+                $"Genre: {Genre?.Trim() ?? "N/A"} | Type: {Genre?.GetType().Name ?? "Unknown"}\n" +
+                $"Artist: {Artist?.Trim() ?? "N/A"} | Type: {Artist?.GetType().Name ?? "Unknown"}"
+            );
+        }
+    }
+
+    namespace InnerSpace {
+        public class Movie { }
+
+        public class School { }
     }
 }

@@ -37,7 +37,7 @@ namespace ExploringTheNet.SessionTwo.AppControl {
             Console.WriteLine();
 
             Console.WriteLine("\nFrom goto statement");
-        startLoop:
+            startLoop:
             if (number <= 5) {
                 Console.Write(number + " ");
                 number++;
@@ -61,6 +61,7 @@ namespace ExploringTheNet.SessionTwo.AppControl {
 
     namespace Inner {
         public class Foo { }
+
         public class Test {
             Foo? f1; // AppControl.Inner.Foo
             AppControl.Foo? f2; // AppControl.Foo
