@@ -6,6 +6,7 @@ using ExploringTheNet.Constant;
 using ExploringTheNet.SessionOne.AppBasic;
 using ExploringTheNet.SessionOne.AppArray;
 using ExploringTheNet.SessionTwo.AppStack;
+using ExploringTheNet.SessionThree.AppPoly;
 using ExploringTheNet.SessionThree.AppClass;
 using ExploringTheNet.SessionTwo.AppDefault;
 using ExploringTheNet.SessionTwo.AppControl;
@@ -20,7 +21,7 @@ internal static class Program {
         } else {
             const string message = AppString.RunWithoutArgument;
             Console.WriteLine($"{message}\n");
-            RunAppClass.RunAnimal();
+            RunAppPoly.RunStack();
         }
     }
 }
