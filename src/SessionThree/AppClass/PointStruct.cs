@@ -1,7 +1,15 @@
 namespace ExploringTheNet.SessionThree.AppClass;
 
+using System;
+
 public struct Point {
-    public int X { get; set; }
+    public int X {
+        get { return this.X; }
+        set {
+            if (value < 18) throw new ArithmeticException("Invalid value");
+            this.X = value;
+        }
+    }
     public int Y { get; set; }
 
     public Point(int x, int y) {
