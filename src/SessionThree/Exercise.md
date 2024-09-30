@@ -1,7 +1,7 @@
 ## Session Three Exercises
 
 Some coding exercises based on the topics that were discussed in class from the third session.  
-The third session covers ideas from the first half of the third unit.
+The third session covers ideas from the third unit.
 
 ### 1. Area and perimeter of a rectangle using out param modifier
 
