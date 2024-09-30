@@ -1,6 +1,6 @@
 namespace ExploringTheNet.SessionThree.AppInterface;
 
-public class RunAppInterface {
+public static class RunAppInterface {
     public static void RunShape() {
         Circle ball = new();
         ball.Radius = 10.0;
