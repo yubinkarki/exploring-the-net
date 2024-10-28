@@ -35,7 +35,7 @@ public class AnotherStack : CustomStack<int> {
     public new string stackMessage = "This is another Stack";
 
     // Calling parent constructor
-    public AnotherStack(int capacity) : base(capacity) {}
+    public AnotherStack(int capacity) : base(capacity) { }
 
     public void ShowBase() {
         // Using the base keyword

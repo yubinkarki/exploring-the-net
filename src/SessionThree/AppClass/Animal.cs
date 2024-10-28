@@ -16,6 +16,7 @@ public class Animal {
             this.age = value;
         }
     }
+
     public string? Name { get; set; }
     public string? Species { get; set; }
 

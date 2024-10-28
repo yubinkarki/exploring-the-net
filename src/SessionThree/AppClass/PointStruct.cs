@@ -10,6 +10,7 @@ public struct Point {
             this.X = value;
         }
     }
+
     public int Y { get; set; }
 
     public Point(int x, int y) {

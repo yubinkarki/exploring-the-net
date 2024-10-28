@@ -5,19 +5,31 @@ using System;
 public class Optimus {
     // Public members are accessible from anywhere
     public int publicField = 10;
-    public void PublicMethod() { Console.WriteLine("Public method"); }
+
+    public void PublicMethod() {
+        Console.WriteLine("Public method");
+    }
 
     // Private members are only accessible in the same class
     private int privateField = 15;
-    private void PrivateMethod() { Console.WriteLine("Private method"); }
+
+    private void PrivateMethod() {
+        Console.WriteLine("Private method");
+    }
 
     // Internal members are accessible within the same assembly (project)
     internal int internalField = 20;
-    internal void InternalMethod() { Console.WriteLine("Internal method"); }
+
+    internal void InternalMethod() {
+        Console.WriteLine("Internal method");
+    }
 
     // Protected members are accessible within the class and its derived classes
     protected int protectedField = 30;
-    protected void ProtectedMethod() { Console.WriteLine("Protected method"); }
+
+    protected void ProtectedMethod() {
+        Console.WriteLine("Protected method");
+    }
 
     private protected class Helper {
         public void Info() {
