@@ -1,11 +1,12 @@
 // A delegate is a type that represents references to methods
+
 namespace ExploringTheNet.SessionFour.AppDelegate;
 
 using System;
 
 public class RunAppDelegate {
     // Creating anonymous function using delegate and statement lambda
-    public static MathDelegate addNumbers = (a, b) => {
+    private static readonly MathDelegate AddNumbers = (a, b) => {
         Console.WriteLine($"Sum from anonymous function is {a + b}");
         return a + b;
     };
@@ -33,6 +34,6 @@ public class RunAppDelegate {
         Action<string> greet = BasicOperations.GreetUser;
         greet("Yubin");
 
-        addNumbers(10, 10);
+        AddNumbers(10, 10);
     }
 }

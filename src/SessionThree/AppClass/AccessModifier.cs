@@ -46,12 +46,12 @@ public class Optimus {
 // Derived class extending/inheriting from Optimus
 public class Derived : Optimus {
     // Derived class can access public, internal, and protected members from the base class
-    public void checkInfo() {
+    public void CheckInfo() {
         Helper db = new();
         Console.WriteLine($"PublicField: {publicField}");
         Console.WriteLine($"InternalField: {internalField}");
         Console.WriteLine($"ProtectedField: {protectedField}");
-        // Console.WriteLine($"ProtectedField: {PrivateField}");
+        // Console.WriteLine($"ProtectedField: {privateField}");
         PublicMethod();
         InternalMethod();
         ProtectedMethod();
@@ -61,7 +61,7 @@ public class Derived : Optimus {
 
 public class Megatron {
     // Separate class can access public and internal members
-    public void checkIsAuthenticated() {
+    public void CheckIsAuthenticated() {
         Optimus prime = new();
 
         Console.WriteLine($"PublicField: {prime.publicField}");

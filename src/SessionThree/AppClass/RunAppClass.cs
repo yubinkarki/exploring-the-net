@@ -45,9 +45,9 @@ public static class RunAppClass {
 
     public static void RunAccessiblity() {
         Derived derivedClass = new();
-        derivedClass.checkInfo();
+        derivedClass.CheckInfo();
 
         Megatron starscream = new();
-        starscream.checkIsAuthenticated();
+        starscream.CheckIsAuthenticated();
     }
 }

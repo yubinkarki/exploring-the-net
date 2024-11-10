@@ -7,7 +7,7 @@ namespace ExploringTheNet.SessionTwo.AppControl {
 
     public static class Jump {
         public static void Run() {
-            int count = 1, number = 1, age = 20;
+            int count = 1, number = 1;
             int[] numbers = new int[] { 2, 4, 6, 12, 8, 10 };
 
             // Using break to terminate a loop
@@ -63,8 +63,8 @@ namespace ExploringTheNet.SessionTwo.AppControl {
         public class Foo { }
 
         public class Test {
-            Foo? f1; // AppControl.Inner.Foo
-            AppControl.Foo? f2; // AppControl.Foo
+            Foo? innerFoo; // AppControl.Inner.Foo
+            AppControl.Foo? outerFoo; // AppControl.Foo
         }
     }
 }

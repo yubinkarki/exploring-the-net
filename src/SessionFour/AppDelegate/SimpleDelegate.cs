@@ -5,7 +5,7 @@ using System;
 // [modifier] delegate [return_type] [delegate_name] ([parameter_list])
 public delegate int MathDelegate(int x, int y);
 
-public class MathOperations {
+public static class MathOperations {
     // Expression lambda
     public static int Add(int x, int y) => x + y;
 
@@ -14,6 +14,6 @@ public class MathOperations {
     public static int Multiply(int x, int y) => x * y;
 }
 
-public class BasicOperations {
+public static class BasicOperations {
     public static void GreetUser(string name) => Console.WriteLine($"Hello {name} :)");
 }
