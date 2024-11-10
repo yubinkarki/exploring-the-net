@@ -1,5 +1,3 @@
-// try catch finally throw
-
 namespace ExploringTheNet.SessionFour.AppLinq;
 
 using System;
