@@ -28,9 +28,9 @@ internal static class Program {
         } else {
             Console.WriteLine($"{AppString.RunWithoutArgument}");
             Console.WriteLine(AppString.Separator);
-            // RunAppDelegate.RunTryCatch();
+            // RunAppDelegate.RunFuncDelegate();
             // RunAppException.RunTryCatch();
-            RunAppLinq.GetStats();
+            RunAppLinq.FilterEmployee();
             Console.WriteLine(AppString.Separator);
         }
     }

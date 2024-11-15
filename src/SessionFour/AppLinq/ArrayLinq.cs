@@ -15,9 +15,9 @@ public class ArrayLinq {
     public static void CheckEven() {
         // from 'variable' in 'data_source' where 'condition' orderby 'variable' 'ascending' select 'variable';
         var evenNumbers = from num in numberList
-            where num % 2 == 0
-            orderby num descending
-            select num;
+                          where num % 2 == 0
+                          orderby num descending
+                          select num;
 
         foreach (int num in evenNumbers) Console.Write($"{num} ");
         Console.WriteLine();
@@ -25,10 +25,9 @@ public class ArrayLinq {
 
     public static void GroupNames() {
         var groupedNames = from name in names
-            group name by name[0]
-            into nameGroup
-            orderby nameGroup.Key ascending
-            select nameGroup;
+                           group name by name[0] into nameGroup
+                           orderby nameGroup.Key ascending
+                           select nameGroup;
 
         foreach (var group in groupedNames) {
             Console.WriteLine($"Names starting with '{group.Key}':");
