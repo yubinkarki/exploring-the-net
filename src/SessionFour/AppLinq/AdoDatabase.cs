@@ -21,13 +21,10 @@ public class AdoDatabase {
     private static void EnsureTableExists() {
         using MySqlConnection conn = new MySqlConnection(connectionString);
 
-        string query = @"
-        
-                CREATE TABLE IF NOT EXISTS Users (
-                    Id INT AUTO_INCREMENT PRIMARY KEY,
-                    Name VARCHAR(100),
-                    Email VARCHAR(100)
-                );";
+        string query = @"CREATE TABLE IF NOT EXISTS Users (
+                        Id INT AUTO_INCREMENT PRIMARY KEY,
+                        Name VARCHAR(100),
+                        Email VARCHAR(100));";
 
         using MySqlCommand cmd = new MySqlCommand(query, conn);
 
