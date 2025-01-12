@@ -1,4 +1,4 @@
-namespace ExploringTheNet.SessionOne.AppOperator;
+namespace ExploringTheNet.src.SessionOne.AppOperator;
 
 using System;
 

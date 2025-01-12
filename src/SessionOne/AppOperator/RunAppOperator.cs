@@ -1,4 +1,4 @@
-namespace ExploringTheNet.SessionOne.AppOperator;
+namespace ExploringTheNet.src.SessionOne.AppOperator;
 
 public static class RunAppOperator {
     public static void RunArithmetic() {

@@ -1,4 +1,4 @@
-namespace ExploringTheNet.Constant;
+namespace ExploringTheNet.src.Constant;
 
 public static class AppEnum {
     public enum Month {

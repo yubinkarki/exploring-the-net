@@ -1,4 +1,4 @@
-namespace ExploringTheNet.SessionOne.AppBasic;
+namespace ExploringTheNet.src.SessionOne.AppBasic;
 
 public class ValuePoint {
     public int X { get; set; }

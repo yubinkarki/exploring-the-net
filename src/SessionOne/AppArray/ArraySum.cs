@@ -1,4 +1,4 @@
-namespace ExploringTheNet.SessionOne.AppArray;
+namespace ExploringTheNet.src.SessionOne.AppArray;
 
 using System;
 
