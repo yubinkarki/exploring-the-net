@@ -12,9 +12,9 @@ using ExploringTheNet.src.SessionTwo.AppStack;
 using ExploringTheNet.src.SessionTwo.AppDefault;
 using ExploringTheNet.src.SessionTwo.AppControl;
 
-using ExploringTheNet.SessionThree.AppPoly;
-using ExploringTheNet.SessionThree.AppClass;
-using ExploringTheNet.SessionThree.AppInterface;
+using ExploringTheNet.src.SessionThree.AppPoly;
+using ExploringTheNet.src.SessionThree.AppClass;
+using ExploringTheNet.src.SessionThree.AppInterface;
 
 using ExploringTheNet.SessionFour.AppLinq;
 using ExploringTheNet.SessionFour.AppDelegate;

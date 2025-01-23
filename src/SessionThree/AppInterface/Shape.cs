@@ -1,6 +1,6 @@
 // Interfaces define what a class must do and not how it must be done
 
-namespace ExploringTheNet.SessionThree.AppInterface;
+namespace ExploringTheNet.src.SessionThree.AppInterface;
 
 using System;
 

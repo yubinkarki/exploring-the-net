@@ -1,4 +1,4 @@
-namespace ExploringTheNet.SessionThree.AppPoly;
+namespace ExploringTheNet.src.SessionThree.AppPoly;
 
 using System;
 

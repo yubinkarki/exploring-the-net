@@ -1,9 +1,9 @@
-namespace ExploringTheNet.SessionThree.AppPoly;
+namespace ExploringTheNet.src.SessionThree.AppPoly;
 
 using System;
 using System.Collections.Generic;
 
-using ExploringTheNet.Constant;
+using ExploringTheNet.src.Constant;
 
 public class RunAppPoly {
     public static void RunCasting() {
