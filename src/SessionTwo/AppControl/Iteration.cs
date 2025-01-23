@@ -1,6 +1,6 @@
 // Iteration statements enable program execution to repeat: for, foreach, while, do
 
-namespace ExploringTheNet.SessionTwo.AppControl;
+namespace ExploringTheNet.src.SessionTwo.AppControl;
 
 using System;
 

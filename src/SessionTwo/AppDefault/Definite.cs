@@ -1,6 +1,6 @@
 // Definite assignment policy
 
-namespace ExploringTheNet.SessionTwo.AppDefault;
+namespace ExploringTheNet.src.SessionTwo.AppDefault;
 
 using System;
 

@@ -1,4 +1,4 @@
-namespace ExploringTheNet.SessionTwo.AppDefault;
+namespace ExploringTheNet.src.SessionTwo.AppDefault;
 
 public static class RunAppDefault {
     public static void RunDefinite() {

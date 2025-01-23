@@ -1,6 +1,6 @@
 // Control statements causes flow of execution to branch: Selection, Iteration and Jump
 
-namespace ExploringTheNet.SessionTwo.AppControl {
+namespace ExploringTheNet.src.SessionTwo.AppControl {
     public static class RunAppControl {
         // Selection: if, switch
         public static void RunSelection() {

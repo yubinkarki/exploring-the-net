@@ -1,4 +1,4 @@
-namespace ExploringTheNet.SessionTwo.AppDefault;
+namespace ExploringTheNet.src.SessionTwo.AppDefault;
 
 using System;
 using System.Text;

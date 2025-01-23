@@ -1,6 +1,6 @@
 // Transfers control to another part of your program: break, continue, goto, return, throw
 
-namespace ExploringTheNet.SessionTwo.AppControl {
+namespace ExploringTheNet.src.SessionTwo.AppControl {
     using System;
 
     public class Foo { }

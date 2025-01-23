@@ -1,4 +1,4 @@
-namespace ExploringTheNet.SessionTwo.AppStack;
+namespace ExploringTheNet.src.SessionTwo.AppStack;
 
 using System;
 using System.Text;
