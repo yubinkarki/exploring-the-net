@@ -7,7 +7,7 @@ namespace ExploringTheNet.src.SessionThree.AppClass {
         public string? Genre { get; set; }
         public string? Artist { get; set; }
 
-        // Default (Nullary) constructor
+        // Default constructor
         public Music() { }
 
         // Method to get the album information
