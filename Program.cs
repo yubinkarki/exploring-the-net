@@ -16,9 +16,9 @@ using ExploringTheNet.src.SessionThree.AppPoly;
 using ExploringTheNet.src.SessionThree.AppClass;
 using ExploringTheNet.src.SessionThree.AppInterface;
 
-using ExploringTheNet.SessionFour.AppLinq;
-using ExploringTheNet.SessionFour.AppDelegate;
-using ExploringTheNet.SessionFour.AppException;
+using ExploringTheNet.src.SessionFour.AppLinq;
+using ExploringTheNet.src.SessionFour.AppDelegate;
+using ExploringTheNet.src.SessionFour.AppException;
 
 internal static class Program {
     private static void Main(string[] args) {
