@@ -2,23 +2,23 @@
 
 using System;
 
-using ExploringTheNet.src.Constant;
+using src.Constant;
 
-using ExploringTheNet.src.SessionOne.AppBasic;
-using ExploringTheNet.src.SessionOne.AppArray;
-using ExploringTheNet.src.SessionOne.AppOperator;
+using src.SessionOne.AppBasic;
+using src.SessionOne.AppArray;
+using src.SessionOne.AppOperator;
 
-using ExploringTheNet.src.SessionTwo.AppStack;
-using ExploringTheNet.src.SessionTwo.AppDefault;
-using ExploringTheNet.src.SessionTwo.AppControl;
+using src.SessionTwo.AppStack;
+using src.SessionTwo.AppDefault;
+using src.SessionTwo.AppControl;
 
-using ExploringTheNet.src.SessionThree.AppPoly;
-using ExploringTheNet.src.SessionThree.AppClass;
-using ExploringTheNet.src.SessionThree.AppInterface;
+using src.SessionThree.AppPoly;
+using src.SessionThree.AppClass;
+using src.SessionThree.AppInterface;
 
-using ExploringTheNet.src.SessionFour.AppLinq;
-using ExploringTheNet.src.SessionFour.AppDelegate;
-using ExploringTheNet.src.SessionFour.AppException;
+using src.SessionFour.AppLinq;
+using src.SessionFour.AppDelegate;
+using src.SessionFour.AppException;
 
 internal static class Program {
     private static void Main(string[] args) {
@@ -28,9 +28,7 @@ internal static class Program {
         } else {
             Console.WriteLine($"{AppString.RunWithoutArgument}");
             Console.WriteLine(AppString.Separator);
-            // RunAppDelegate.RunFuncDelegate();
-            // RunAppException.RunTryCatch();
-            RunAppLinq.FilterEmployee();
+            RunAppBasic.RunBaseType();
             Console.WriteLine(AppString.Separator);
         }
     }
