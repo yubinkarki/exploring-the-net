@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
     <PropertyGroup>
+        <NoWarn>IDE0130</NoWarn>
         <Nullable>enable</Nullable>
         <OutputType>Exe</OutputType>
         <ImplicitUsings>disable</ImplicitUsings>
@@ -10,10 +10,10 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Folder Include="src\" />
+        <Folder Include="src\"/>
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="MySql.Data" Version="9.1.0" />
+        <PackageReference Include="MySql.Data" Version="9.1.0"/>
     </ItemGroup>
 </Project>
