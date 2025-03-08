@@ -5,7 +5,7 @@ using System;
 using MySql.Data.MySqlClient;
 
 public class AdoDatabase {
-    private static readonly string connectionString = "Server=localhost;Database=TestDB;Uid=root;Pwd=your_password;";
+    private const string ConnectionString = "Server=localhost;Database=TestDB;Uid=root;Pwd=your_password;";
 
     public static void RunDatabase() {
         EnsureTableExists();
@@ -19,9 +19,9 @@ public class AdoDatabase {
     }
 
     private static void EnsureTableExists() {
-        using MySqlConnection conn = new MySqlConnection(connectionString);
+        using MySqlConnection conn = new(ConnectionString);
 
-        string query = @"CREATE TABLE IF NOT EXISTS Users (
+        const string query = @"CREATE TABLE IF NOT EXISTS Users (
                         Id INT AUTO_INCREMENT PRIMARY KEY,
                         Name VARCHAR(100),
                         Email VARCHAR(100));";
@@ -38,9 +38,9 @@ public class AdoDatabase {
     }
 
     private static void CreateUser(string name, string email) {
-        using MySqlConnection conn = new MySqlConnection(connectionString);
+        using MySqlConnection conn = new(ConnectionString);
 
-        string query = "INSERT INTO Users (Name, Email) VALUES (@Name, @Email);";
+        const string query = "INSERT INTO Users (Name, Email) VALUES (@Name, @Email);";
 
         using MySqlCommand cmd = new MySqlCommand(query, conn);
 
@@ -51,11 +51,7 @@ public class AdoDatabase {
             conn.Open();
             int result = cmd.ExecuteNonQuery();
 
-            if (result > 0) {
-                Console.WriteLine("User created successfully.");
-            } else {
-                Console.WriteLine("Error occurred while creating user.");
-            }
+            Console.WriteLine(result > 0 ? "User created successfully." : "Error occurred while creating user.");
         } catch (MySqlException ex) {
             Console.WriteLine("An error occurred while creating user: " + ex.Message);
         }
@@ -63,11 +59,11 @@ public class AdoDatabase {
 
     // Read (Select) Operation
     private static void ReadUsers() {
-        using MySqlConnection conn = new MySqlConnection(connectionString);
+        using MySqlConnection conn = new(ConnectionString);
 
-        string query = "SELECT * FROM Users;";
+        const string query = "SELECT * FROM Users;";
 
-        using MySqlCommand cmd = new MySqlCommand(query, conn);
+        using MySqlCommand cmd = new(query, conn);
         try {
             conn.Open();
 
@@ -85,8 +81,8 @@ public class AdoDatabase {
 
     // Update Operation
     private static void UpdateUser(int id, string name, string email) {
-        using MySqlConnection conn = new MySqlConnection(connectionString);
-        string query = "UPDATE Users SET Name = @Name, Email = @Email WHERE Id = @Id;";
+        using MySqlConnection conn = new(ConnectionString);
+        const string query = "UPDATE Users SET Name = @Name, Email = @Email WHERE Id = @Id;";
 
         using MySqlCommand cmd = new MySqlCommand(query, conn);
         cmd.Parameters.AddWithValue("@Id", id);
@@ -97,11 +93,7 @@ public class AdoDatabase {
             conn.Open();
             int result = cmd.ExecuteNonQuery();
 
-            if (result > 0) {
-                Console.WriteLine("User updated successfully.");
-            } else {
-                Console.WriteLine("No user found with the given Id.");
-            }
+            Console.WriteLine(result > 0 ? "User updated successfully." : "No user found with the given Id.");
         } catch (MySqlException ex) {
             Console.WriteLine("An error occurred while updating user: " + ex.Message);
         }
@@ -109,21 +101,17 @@ public class AdoDatabase {
 
     // Delete Operation
     private static void DeleteUser(int id) {
-        using MySqlConnection conn = new MySqlConnection(connectionString);
-        string query = "DELETE FROM Users WHERE Id = @Id;";
+        using MySqlConnection conn = new(ConnectionString);
+        const string query = "DELETE FROM Users WHERE Id = @Id;";
 
-        using MySqlCommand cmd = new MySqlCommand(query, conn);
+        using MySqlCommand cmd = new(query, conn);
         cmd.Parameters.AddWithValue("@Id", id);
 
         try {
             conn.Open();
             int result = cmd.ExecuteNonQuery();
 
-            if (result > 0) {
-                Console.WriteLine("User deleted successfully.");
-            } else {
-                Console.WriteLine("No user found with the given Id.");
-            }
+            Console.WriteLine(result > 0 ? "User deleted successfully." : "No user found with the given Id.");
         } catch (MySqlException ex) {
             Console.WriteLine("An error occurred while deleting user: " + ex.Message);
         }
