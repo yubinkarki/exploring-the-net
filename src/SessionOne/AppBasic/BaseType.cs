@@ -13,7 +13,7 @@ public static class BaseType {
         const string firstName = "Yubin";
 
         Console.WriteLine("The sum is " + sum);
-        Console.WriteLine("The name is " + firstName.ToUpper() + " " + numOne.ToString());
+        Console.WriteLine("The name is " + firstName.ToUpper() + " " + numOne);
         Console.WriteLine($"Time: {currentTime}");
         Console.WriteLine("\nTypes:");
         Console.WriteLine($"numOne >> {numOne.GetType()}");
