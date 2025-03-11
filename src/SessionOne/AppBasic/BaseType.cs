@@ -4,7 +4,7 @@ using System;
 
 public static class BaseType {
     public static void Run() {
-        int numOne = 10;
+        int numOne = 10; // Assigning the literal value 10 into numOne variable
         int numTwo = 20;
         int sum = numOne + numTwo;
 
@@ -14,7 +14,7 @@ public static class BaseType {
 
         Console.WriteLine("The sum is " + sum);
         Console.WriteLine("The name is " + firstName.ToUpper() + " " + numOne);
-        Console.WriteLine($"Time: {currentTime}");
+        Console.WriteLine($"Time: {currentTime}"); // String interpolation
         Console.WriteLine("\nTypes:");
         Console.WriteLine($"numOne >> {numOne.GetType()}");
     }
