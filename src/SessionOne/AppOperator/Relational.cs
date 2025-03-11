@@ -18,7 +18,7 @@ public static class Relational {
             Console.WriteLine("Inside NOT");
         }
 
-        if ((isLess || isGreaterOrEqual) && (isEqual)) {
+        if ((isLess || isGreaterOrEqual) && isEqual) {
             Console.WriteLine("Inside OR");
         }
 

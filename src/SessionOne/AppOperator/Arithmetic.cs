@@ -30,7 +30,7 @@ public static class Arithmetic {
         numThree += 10; // numThree = numThree + 10
         numFour -= numThree;
 
-        // Implement *= /= %= <<= >>= &= ^= |=
+        // Implement *= /= %=
 
         Console.WriteLine("After re-assignment:");
         Console.WriteLine(
