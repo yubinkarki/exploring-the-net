@@ -8,14 +8,15 @@ public static class NumberConversion {
         short numFour = 0;
         decimal numTwo = 20.111m;
 
-        long numThree = numOne;
+        long numThree = numOne; // Implicitly converting int to long type
 
-        float numFive = (float)numTwo;
+        float numFive = (float)numTwo; // Explicitly converting decimal to float type
 
         int numSix = (int)numFive;
 
         Type intType = typeof(int);
 
+        // Checking before conversion from big value to small value
         if (numTwo >= short.MinValue && numTwo <= short.MaxValue) {
             numFour = (short)numTwo;
             Console.WriteLine("numTwo type casting into short successful");
