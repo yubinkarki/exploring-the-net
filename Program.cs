@@ -5,6 +5,7 @@ using System;
 using src.Constant;
 
 using src.SessionOne.AppBasic;
+
 using src.SessionOne.AppArray;
 using src.SessionOne.AppOperator;
 
@@ -28,7 +29,7 @@ internal static class Program {
         } else {
             Console.WriteLine($"{AppString.RunWithoutArgument}");
             Console.WriteLine(AppString.Separator);
-            RunAppBasic.RunBaseType();
+            RunAppBasic.RunNumberConversion();
             Console.WriteLine(AppString.Separator);
         }
     }

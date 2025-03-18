@@ -16,7 +16,7 @@ public static class Bitwise {
         int orResult = primary | secondary;
         Console.WriteLine($"{primary} | {secondary} = {orResult} : {Convert.ToString(orResult, 2)}");
 
-        int xorResult = primary ^ secondary;
+        int xorResult = primary ^ secondary; // true if only one operand is true
         Console.WriteLine($"{primary} ^ {secondary} = {xorResult} : {Convert.ToString(xorResult, 2)}");
 
         int onesComplementResult = ~primary; // -(x+1)

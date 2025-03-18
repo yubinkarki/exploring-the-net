@@ -52,7 +52,7 @@ public static class Miscellaneous {
         }
 
         object? planet = null;
-        string mercury = planet as string ?? "Earth";
+        string mercury = planet as string ?? "Earth"; // Setting default value if planet is null
 
         System.Console.WriteLine($"\nmercury = {mercury} \t type of mercury = {mercury.GetType()}");
 
@@ -63,6 +63,10 @@ public static class Miscellaneous {
 
     // Exercise 1.2
     private static int CheckMax(int a, int b) {
+        // if (a > b) {
+        //     return a;
+        // } else return b;
+
         return a > b ? a : b;
     }
 }

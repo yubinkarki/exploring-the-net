@@ -2,7 +2,7 @@ namespace ExploringTheNet.src.SessionOne.AppOperator;
 
 using System;
 
-// In C#, the null-conditional operator is aka the Elvis operator
+// In C#, the null-conditional operator "?." is aka the Elvis operator
 public static class ElvisPresley {
     public static void Run() {
         User user = new User();
