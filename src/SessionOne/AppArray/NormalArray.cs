@@ -5,7 +5,7 @@ using System;
 public static class NormalArray {
     public static void Run() {
         int[] numbers = new int[5];
-        char[] letters = new char[] { 'a', 'e', 'i', 'o', 'u' };
+        char[] letters = ['a', 'e', 'i', 'o', 'u'];
 
         numbers[0] = 10;
         numbers[1] = 20;
@@ -23,6 +23,6 @@ public static class NormalArray {
             Console.Write(letter + " ");
         }
 
-        // Add all elements in the 'numbers' array.
+        // Add all elements in the 'numbers' array
     }
 }

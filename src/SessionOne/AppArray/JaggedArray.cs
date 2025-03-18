@@ -5,15 +5,15 @@ using System;
 public static class JaggedArray {
     public static void Run() {
         int[][] numbers = new int[3][] {
-            new int[] { 1, 2, 3 },
-            new int[] { 4, 5 },
-            new int[] { 7 },
+            [1, 2, 3],
+            [4, 5],
+            [7],
         };
 
-        char[][] letters = {
-            new char[] { 'a', 'e', 'i', 'o', 'u' },
-            new char[] { 'b', 'c' },
-        };
+        char[][] letters = [
+            ['a', 'e', 'i', 'o', 'u'],
+            ['b', 'c'],
+        ];
 
         Console.WriteLine("Elements in numbers list:");
         foreach (int[] rows in numbers) {
