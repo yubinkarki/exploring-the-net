@@ -6,7 +6,7 @@ public static class Param {
     public static void Run() {
         int mainNumber = 10;
 
-        AddNumber(numOne: 1);
+        AddNumber(numOne: 1); // Named argument
 
         IncrementByOne(ref mainNumber);
         Console.WriteLine($"Old number is {mainNumber}");
@@ -40,6 +40,7 @@ public static class Param {
         return true;
     }
 
+    // Params modifier
     private static int MajorSum(params int[] numbers) {
         int sum = 0;
         foreach (int num in numbers) sum += num;
