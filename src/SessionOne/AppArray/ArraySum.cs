@@ -8,7 +8,7 @@ public static class ArraySum {
         int[] numbersToAdd = new int[5];
 
         Console.Write("Enter the number of elements (5 max): ");
-        string totalNumberInput = Console.ReadLine() ?? string.Empty;
+        string totalNumberInput = Console.ReadLine() ?? string.Empty; // Taking input from user
 
         // Handle more than max number case
         if (!int.TryParse(totalNumberInput, out totalNumber)) {
