@@ -5,7 +5,7 @@ using System.Text;
 
 public class Factorial {
     public static void Run() {
-        int factorialNumber = 5;
+        int factorialNumber = 4;
         int result = GetFactorial(factorialNumber);
 
         Console.WriteLine($"\nFactorial of {factorialNumber} = {result}\n");
@@ -28,5 +28,5 @@ public class Factorial {
         // address is not yet eligible for GC
 
         Console.WriteLine(street);
-    }
+    } // Everything gets deallocated after this
 }
