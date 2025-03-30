@@ -20,3 +20,6 @@ riderModule.iml
 
 # Generated files
 /.idea/
+
+# VS Code
+.vscode
