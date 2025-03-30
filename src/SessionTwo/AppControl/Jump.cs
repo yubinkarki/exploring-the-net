@@ -37,7 +37,7 @@ namespace ExploringTheNet.src.SessionTwo.AppControl {
             Console.WriteLine();
 
             Console.WriteLine("\nFrom goto statement");
-            startLoop:
+        startLoop:
             if (number <= 5) {
                 Console.Write(number + " ");
                 number++;
@@ -55,7 +55,7 @@ namespace ExploringTheNet.src.SessionTwo.AppControl {
                 Console.Write(i + " ");
             }
 
-            Console.Write("\nWhen does this get printed?");
+            Console.Write("\nThe breaking condition has been encountered.");
         }
     }
 

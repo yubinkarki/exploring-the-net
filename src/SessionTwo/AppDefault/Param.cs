@@ -18,7 +18,7 @@ public static class Param {
         Console.WriteLine($"Sum of params = {MajorSum(1, 1, 1, 1)}\n");
 
         // Exercise 2.2
-        MajorMultiplication(6, 1, 2, 3, 4, 5, 6);
+        MajorMultiplication(1, 2, 3, 4, 5, 6);
     }
 
     // Pass by value
@@ -50,12 +50,14 @@ public static class Param {
     private static void MajorMultiplication(params int[] numbers) {
         int[,] result = new int[numbers.Length, 5];
 
+        // Calculating and saving the result
         for (int i = 0; i < numbers.Length; i++) {
             for (int j = 0; j < 5; j++) {
                 result[i, j] = numbers[i] * (j + 1);
             }
         }
 
+        // Formatting and displaying the result
         for (int i = 0; i < result.GetLength(0); i++) {
             Console.Write($"Multiplication of {numbers[i]} = ");
             for (int j = 0; j < result.GetLength(1); j++) {
