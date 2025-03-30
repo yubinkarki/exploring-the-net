@@ -1,12 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <NoWarn>IDE0130</NoWarn>
         <Nullable>enable</Nullable>
         <OutputType>Exe</OutputType>
         <ImplicitUsings>disable</ImplicitUsings>
         <TargetFramework>net8.0</TargetFramework>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+        <NoWarn>IDE0130;CS0168;CS0169;CS0649;IDE0051;CA1822;CS0414</NoWarn>
     </PropertyGroup>
 
     <ItemGroup>
