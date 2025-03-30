@@ -2,26 +2,25 @@
 
 using System;
 
-using src.Constant;
+using Constant;
 
-using src.SessionOne.AppBasic;
+using SessionOne.AppBasic;
+using SessionOne.AppArray;
+using SessionOne.AppOperator;
 
-using src.SessionOne.AppArray;
-using src.SessionOne.AppOperator;
+using SessionTwo.AppStack;
+using SessionTwo.AppDefault;
+using SessionTwo.AppControl;
 
-using src.SessionTwo.AppStack;
-using src.SessionTwo.AppDefault;
-using src.SessionTwo.AppControl;
-
-using src.SessionThree.AppPoly;
-using src.SessionThree.AppClass;
-using src.SessionThree.AppInterface;
+using SessionThree.AppPoly;
+using SessionThree.AppClass;
+using SessionThree.AppInterface;
 
 using src.SessionFour.AppLinq;
 using src.SessionFour.AppDelegate;
 using src.SessionFour.AppException;
 
-internal static class Program {
+public class Program {
     private static void Main(string[] args) {
         if (args.Length > 0) {
             string combinedArgs = string.Join(", ", args);
@@ -29,7 +28,7 @@ internal static class Program {
         } else {
             Console.WriteLine($"{AppString.RunWithoutArgument}");
             Console.WriteLine(AppString.Separator);
-            RunAppBasic.RunNumberConversion();
+            RunAppControl.RunIteration();
             Console.WriteLine(AppString.Separator);
         }
     }
