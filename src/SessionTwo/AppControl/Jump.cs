@@ -1,6 +1,6 @@
 // Transfers control to another part of your program: break, continue, goto, return, throw
 
-namespace ExploringTheNet.src.SessionTwo.AppControl {
+namespace ExploringTheNet.SessionTwo.AppControl {
     using System;
 
     public class Foo { }
@@ -8,7 +8,7 @@ namespace ExploringTheNet.src.SessionTwo.AppControl {
     public static class Jump {
         public static void Run() {
             int count = 1, number = 1;
-            int[] numbers = new int[] { 2, 4, 6, 12, 8, 10 };
+            int[] numbers = [2, 4, 6, 12, 8, 10];
 
             // Using break to terminate a loop
             for (int i = 0; i < numbers.Length; i++) {
@@ -63,8 +63,8 @@ namespace ExploringTheNet.src.SessionTwo.AppControl {
         public class Foo { }
 
         public class Test {
-            Foo? innerFoo; // AppControl.Inner.Foo
-            AppControl.Foo? outerFoo; // AppControl.Foo
+            public readonly Foo? innerFoo; // AppControl.Inner.Foo
+            public readonly AppControl.Foo? outerFoo; // AppControl.Foo
         }
     }
 }

@@ -1,4 +1,4 @@
-namespace ExploringTheNet.src.SessionOne.AppBasic;
+namespace ExploringTheNet.SessionOne.AppBasic;
 
 using System;
 

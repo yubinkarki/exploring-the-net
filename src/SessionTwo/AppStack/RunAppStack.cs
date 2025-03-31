@@ -1,4 +1,4 @@
-namespace ExploringTheNet.src.SessionTwo.AppStack;
+namespace ExploringTheNet.SessionTwo.AppStack;
 
 public static class RunAppStack {
     public static void RunFactorial() {

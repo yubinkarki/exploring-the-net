@@ -1,6 +1,6 @@
 // Method overriding with virtual type
 
-namespace ExploringTheNet.src.SessionThree.AppInterface;
+namespace ExploringTheNet.SessionThree.AppInterface;
 
 using System;
 

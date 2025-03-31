@@ -1,6 +1,6 @@
 // Iteration statements enable program execution to repeat: for, foreach, while, do
 
-namespace ExploringTheNet.src.SessionTwo.AppControl;
+namespace ExploringTheNet.SessionTwo.AppControl;
 
 using System;
 
@@ -31,7 +31,7 @@ public static class Iteration {
             }
         } while (!isValidInput);
 
-        Console.WriteLine($"You entered a valid number: {number}");
+        Console.WriteLine($"You entered a valid number: {number}\n");
 
         // Fix the printed pattern
         for (int i = 1; i < 5; i++) {

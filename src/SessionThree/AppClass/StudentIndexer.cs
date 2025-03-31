@@ -1,4 +1,4 @@
-namespace ExploringTheNet.src.SessionThree.AppClass;
+namespace ExploringTheNet.SessionThree.AppClass;
 
 public class StudentIndexer {
     public string[] nameList;

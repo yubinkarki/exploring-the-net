@@ -1,4 +1,4 @@
-namespace ExploringTheNet.src.Constant;
+namespace ExploringTheNet.Constant;
 
 public static class AppString {
     public const string Separator = "==================================";

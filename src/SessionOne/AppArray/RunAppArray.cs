@@ -1,4 +1,4 @@
-namespace ExploringTheNet.src.SessionOne.AppArray;
+namespace ExploringTheNet.SessionOne.AppArray;
 
 public static class RunAppArray {
     public static void RunNormalArray() {

@@ -1,4 +1,4 @@
-namespace ExploringTheNet.src.SessionOne.AppOperator;
+namespace ExploringTheNet.SessionOne.AppOperator;
 
 public class User {
     private const int _age = 30;

@@ -1,6 +1,6 @@
 // Selection statements choose different paths of execution: if and switch
 
-namespace ExploringTheNet.src.SessionTwo.AppControl;
+namespace ExploringTheNet.SessionTwo.AppControl;
 
 using System;
 

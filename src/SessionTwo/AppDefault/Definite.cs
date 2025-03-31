@@ -1,14 +1,14 @@
 // Definite assignment policy
 
-namespace ExploringTheNet.src.SessionTwo.AppDefault;
+namespace ExploringTheNet.SessionTwo.AppDefault;
 
 using System;
 
 public static class Definite {
     // Fields are initialized with default values
-    private static int age;
-    private static bool isOn;
-    private static string? name;
+    private static readonly int age;
+    private static readonly bool isOn;
+    private static readonly string? name;
 
     public static void Run() {
         // Local variable must be assigned a value

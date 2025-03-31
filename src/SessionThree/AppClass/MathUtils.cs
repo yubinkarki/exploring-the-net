@@ -1,4 +1,4 @@
-namespace ExploringTheNet.src.SessionThree.AppClass;
+namespace ExploringTheNet.SessionThree.AppClass;
 
 public static class MathUtils {
     public static readonly double pi = 3.14;

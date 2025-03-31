@@ -1,21 +1,21 @@
 // Interfaces define what a class must do and not how it must be done
 
-namespace ExploringTheNet.src.SessionThree.AppInterface;
+namespace ExploringTheNet.SessionThree.AppInterface;
 
 using System;
 
 public interface IShapeArea {
     // Only method signature, abstract by default
-    public double getArea();
+    public double GetArea();
 }
 
 public interface IShapeDraw {
-    public void getPosition();
+    public void GetPosition();
 }
 
 // Multiple inheritance
 public abstract class CommonShape : IShapeArea, IShapeDraw {
-    private int id;
+    private readonly int id;
 
     public abstract string Name { get; set; }
 
@@ -23,11 +23,11 @@ public abstract class CommonShape : IShapeArea, IShapeDraw {
         Console.WriteLine("This is inside LocateUser");
     }
 
-    public abstract double getArea();
-    public abstract void getPosition();
+    public abstract double GetArea();
+    public abstract void GetPosition();
 
-    public int getId() {
-        return this.id;
+    public int GetId() {
+        return id;
     }
 }
 
@@ -52,20 +52,20 @@ public class Circle : CommonShape {
         Console.WriteLine("This is inside overridden LocateUser method");
     }
 
-    public override double getArea() {
+    public override double GetArea() {
         double area = Math.PI * radius * radius;
         return Math.Round(area, 2);
     }
 
-    public override void getPosition() {
+    public override void GetPosition() {
         Console.WriteLine($"⚡️ --- Drawing a {Name} --- ⚡️");
     }
 }
 
 public static class ShapeManager {
     public static void PrintShapeInfo(CommonShape shape) {
-        shape.getPosition();
+        shape.GetPosition();
         Console.WriteLine($"Shape Name: {shape.Name}");
-        Console.WriteLine($"Area: {shape.getArea()}");
+        Console.WriteLine($"Area: {shape.GetArea()}");
     }
 }

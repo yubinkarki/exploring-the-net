@@ -1,4 +1,4 @@
-namespace ExploringTheNet.src.SessionThree.AppClass;
+namespace ExploringTheNet.SessionThree.AppClass;
 
 using System;
 
@@ -11,7 +11,7 @@ public class Optimus {
     }
 
     // Private members are only accessible in the same class
-    private int privateField = 15;
+    private readonly int privateField = 15;
 
     private void PrivateMethod() {
         Console.WriteLine("Private method");
@@ -47,7 +47,7 @@ public class Optimus {
 public class Derived : Optimus {
     // Derived class can access public, internal, and protected members from the base class
     public void CheckInfo() {
-        Helper db = new();
+        Helper _ = new();
         Console.WriteLine($"PublicField: {publicField}");
         Console.WriteLine($"InternalField: {internalField}");
         Console.WriteLine($"ProtectedField: {protectedField}");

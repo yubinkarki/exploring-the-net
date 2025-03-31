@@ -1,4 +1,4 @@
-namespace ExploringTheNet.src.SessionThree.AppInterface;
+namespace ExploringTheNet.SessionThree.AppInterface;
 
 public static class RunAppInterface {
     public static void RunShape() {
