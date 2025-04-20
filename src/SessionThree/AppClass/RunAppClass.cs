@@ -6,18 +6,18 @@ public static class RunAppClass {
     public static void RunAnimal() {
         Animal dog = new Animal(name: "Golden", age: 0, species: "Nice");
         // Animal cat = new Animal();
-        // Animal bird = new Animal();
+        // Animal bird = new();
 
         Console.WriteLine($"Dog was {dog.Age} years old");
         dog.Age = 10;
         Console.WriteLine($"Dog is {dog.Age} years old after update\n");
         dog.AnimalDetails();
         dog.MakeSound();
-        dog.MakeSound("Labrador");
+        dog.MakeSound(animalName: "Labrador");
     }
 
     public static void RunMusic() {
-        Music nepali = new();
+        Music nepali = new Music();
         Music english = new();
 
         nepali.Artist = "Nima Rumba";
@@ -38,12 +38,12 @@ public static class RunAppClass {
         kct[3] = "Four";
         kct[4] = "Five";
 
-        for (int i = 0; i < kct.nameList.Length; i++) {
+        for (int i = 0; i < kct.NameList.Length; i++) {
             Console.WriteLine(kct[i]);
         }
     }
 
-    public static void RunAccessiblity() {
+    public static void RunAccessibility() {
         Derived derivedClass = new();
         derivedClass.CheckInfo();
 
