@@ -3,19 +3,26 @@ namespace ExploringTheNet.SessionThree.AppClass;
 using System;
 
 public struct Point {
+    private int _x;
+    private int _y;
+
+    // Parameterized constructor
+    public Point(int x, int y) {
+        _x = x;
+        _y = y;
+    }
+
     public int X {
-        get { return this.X; }
+        get => _x;
         set {
             if (value < 18) throw new ArithmeticException("Invalid value");
-            this.X = value;
+            _x = value;
         }
     }
 
-    public int Y { get; set; }
-
-    public Point(int x, int y) {
-        X = x;
-        Y = y;
+    public int Y {
+        get => _y;
+        set => _y = value;
     }
 
     // Invalid: Cannot have a constructor without parameters
