@@ -8,7 +8,9 @@ namespace ExploringTheNet.SessionThree.AppClass {
         public string? Artist { get; set; }
 
         // Default constructor
-        public Music() { }
+        public Music() {
+            Console.WriteLine("Inside 'Music' default constructor\n");
+        }
 
         // Method to get the album information
         public void ShowInfo() {
