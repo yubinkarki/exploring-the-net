@@ -1,15 +1,15 @@
 namespace ExploringTheNet.SessionThree.AppClass;
 
 public class StudentIndexer {
-    public string[] nameList;
+    public readonly string[] NameList;
 
     public StudentIndexer(int maxSize) {
-        nameList = new string[maxSize];
+        NameList = new string[maxSize];
     }
 
     // Defining an indexer - <modifier> <return type> this [argument list]
     public string this[int index] {
-        get { return nameList[index]; }
-        set { nameList[index] = value; }
+        get => NameList[index];
+        set => NameList[index] = value;
     }
 }
