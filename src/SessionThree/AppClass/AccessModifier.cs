@@ -51,7 +51,7 @@ public class Derived : Optimus {
         Console.WriteLine($"PublicField: {publicField}");
         Console.WriteLine($"InternalField: {internalField}");
         Console.WriteLine($"ProtectedField: {protectedField}");
-        // Console.WriteLine($"ProtectedField: {privateField}");
+        // Console.WriteLine($"PrivateField: {privateField}");
         PublicMethod();
         InternalMethod();
         ProtectedMethod();
