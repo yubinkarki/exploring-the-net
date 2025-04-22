@@ -18,9 +18,7 @@ public class RunAppPoly {
 
         Guest? guestUser = guest as Guest;
 
-        if (guestUser != null) {
-            guestUser.Greet();
-        }
+        guestUser?.Greet();
     }
 
     public static void RunOperatorOverloading() {
