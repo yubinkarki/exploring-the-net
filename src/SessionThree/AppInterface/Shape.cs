@@ -6,14 +6,14 @@ using System;
 
 public interface IShapeArea {
     // Only method signature, abstract by default
-    public double GetArea();
+    double GetArea();
 }
 
 public interface IShapeDraw {
-    public void GetPosition();
+    void GetPosition();
 }
 
-// Multiple inheritance
+// Multiple inheritance - dynamic polymorphism with abstract
 public abstract class CommonShape : IShapeArea, IShapeDraw {
     private readonly int id;
 
@@ -23,21 +23,20 @@ public abstract class CommonShape : IShapeArea, IShapeDraw {
         Console.WriteLine("This is inside LocateUser");
     }
 
-    public abstract double GetArea();
-    public abstract void GetPosition();
-
     public int GetId() {
         return id;
     }
+
+    // These two come from the interfaces above
+    public abstract double GetArea();
+    public abstract void GetPosition();
 }
 
 // Hybrid inheritance
 public class Circle : CommonShape {
-    // These are fields
     private double radius = 0;
     private string name = "Circle";
 
-    // This is a property with accessors
     public override string Name {
         get { return name; }
         set { name = value; }
