@@ -2,6 +2,7 @@ namespace ExploringTheNet.SessionThree.AppPoly;
 
 using System;
 
+// Generic class
 public class CustomStack<T> {
     private int top;
     private T[] elements;
@@ -14,6 +15,7 @@ public class CustomStack<T> {
     }
 
     public void Push(T item) {
+        // Length gives the total capacity of the array
         if (top == elements.Length - 1) throw new Exception("Stack overflow");
         elements[++top] = item;
     }
