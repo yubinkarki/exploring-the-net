@@ -63,6 +63,20 @@ public class RunAppPoly {
         Console.WriteLine($"Number of elements after clearing: {stack.Count}"); // 0
     }
 
+    public static void RunSwapNumbers() {
+        int a = 5, b = 10;
+
+        Console.WriteLine($"Before swap: a = {a}, b = {b}");
+        SwapNumbers.SwapValues<int>(ref a, ref b);
+        Console.WriteLine($"After swap: a = {a}, b = {b}");
+
+        string c = "Hello", d = "World";
+
+        Console.WriteLine($"Before swap: c = {c}, d = {d}");
+        SwapNumbers.SwapValues<string>(ref c, ref d);
+        Console.WriteLine($"After swap: c = {c}, d = {d}");
+    }
+
     public static void RunCustomStack() {
         int x = 9;
         object y = x; // Boxing the int x into object y
@@ -79,6 +93,7 @@ public class RunAppPoly {
         // Getting the type of an object
         Console.WriteLine(myStack.GetType());
         Type stackType = typeof(CustomStack<string>);
+
         Console.WriteLine($"Type of CustomStack = {stackType}");
 
         Console.WriteLine($"User role = {AppEnum.UserRole.admin} at position {(int)AppEnum.UserRole.admin}");
