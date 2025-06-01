@@ -4,13 +4,13 @@ using System;
 
 public static class AppTryCatch {
     private static int numOne = 10, numTwo = 0;
-    private static string[] nameList = ["Crhis", "Jake", "Tom"];
+    private static string[] nameList = ["Chris", "Jake", "Tom"];
 
     public static void ZeroDivision() {
         try {
             int result = numOne / numTwo;
 
-            if (result < 0) throw new ArithmeticException("Result is less than zero.");
+            if (result == 5) throw new ArithmeticException("Result is less than zero.");
 
             Console.WriteLine($"Division result is {result}");
         } catch (DivideByZeroException e) {
@@ -26,7 +26,7 @@ public static class AppTryCatch {
         try {
             nameList[3] = "Yubin";
         } catch (IndexOutOfRangeException e) {
-            Console.WriteLine($"What are you even doing? {e.Message}");
+            Console.WriteLine($"Invalid operation. {e.Message}");
         } catch (InvalidOperationException e) {
             Console.WriteLine($"Failed to execute this operation. {e}");
         } catch (FormatException e) {
