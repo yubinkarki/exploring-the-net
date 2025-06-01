@@ -20,8 +20,8 @@ public static class RunAppLinq {
         ];
 
         var highSalaryEmployees = from e in employees
-            where e.Salary > 10000
-            select new { e.Name, e.Address };
+                                  where e.Salary > 10000
+                                  select new { e.Name, e.Address };
 
         Console.WriteLine("Name\t\tAddress");
         foreach (var emp in highSalaryEmployees) {
@@ -29,6 +29,7 @@ public static class RunAppLinq {
         }
     }
 
+    // Using aggregate functions - operations that process a collection of values
     public static void GetStats() {
         List<int> studentMarks = [10, 12, 5, 20, 25, 60, 44];
 
@@ -41,5 +42,22 @@ public static class RunAppLinq {
         Console.WriteLine("Lowest mark: " + lowestMark);
         Console.WriteLine("Sum of all marks: " + totalMark);
         Console.WriteLine("Number of marks: " + markCount);
+    }
+
+    public static void JoinLists() {
+        List<string> name = ["Ram", "Radha", "Krishna", "Hari"];
+        List<string> address = ["Bhaktapur", "Kathmandu", "Bhaktapur", "Lalitpur"];
+
+        var concatResult = name.Concat(address);
+
+        Console.Write("Concat result >> ");
+        foreach (string result in concatResult) Console.Write($"{result} ");
+        Console.WriteLine();
+
+        var unionResult = name.Union(address);
+
+        Console.Write("Union result >> ");
+        foreach (string result in unionResult) Console.Write($"{result} ");
+        Console.WriteLine();
     }
 }

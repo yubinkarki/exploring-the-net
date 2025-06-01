@@ -17,6 +17,7 @@ public class RunAppDelegate {
         int addResult = addNum(5, 10);
         Console.WriteLine($"Addition result = {addResult}");
 
+        // Assigning multiple methods to the same delegate object
         MathDelegate multicast = new(MathOperations.Add);
         multicast += MathOperations.Subtract;
         multicast += MathOperations.Multiply;
@@ -34,6 +35,7 @@ public class RunAppDelegate {
         Action<string> greet = BasicOperations.GreetUser;
         greet("Yubin");
 
+        // Calling the anonymous function
         AddNumbers(10, 10);
     }
 }
