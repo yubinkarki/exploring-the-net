@@ -5,10 +5,10 @@ Part of the **DotNet Technology** course for BCA 5th semester
 
 ## Units
 
-- [Unit 1 - Introducing C# and the .NET Framework](#unit-1---introducing-c-and-the-net-framework)
-- [Unit 2 - The C# Language Basics](#unit-2---the-c-language-basics)
-- [Unit 3 - Creating Types in C#](#unit-3---creating-types-in-c)
-- [Unit 4 - Advanced C#](#unit-4---advanced-c)
+-   [Unit 1 - Introducing C# and the .NET Framework](#unit-1---introducing-c-and-the-net-framework)
+-   [Unit 2 - The C# Language Basics](#unit-2---the-c-language-basics)
+-   [Unit 3 - Creating Types in C#](#unit-3---creating-types-in-c)
+-   [Unit 4 - Advanced C#](#unit-4---advanced-c)
 
 ## Development Setup
 
@@ -37,7 +37,7 @@ Procedural vs OOP
 ```
 
 |          | Functional Decomposition                   | Object-Oriented Programming                           |
-|----------|--------------------------------------------|-------------------------------------------------------|
+| -------- | ------------------------------------------ | ----------------------------------------------------- |
 | Approach | Divides system into smaller functions      | Divides system into objects that represent entities   |
 | Focus    | Emphasis on functions that operate on data | Emphasis on objects that hold data and their behavior |
 
@@ -96,3 +96,13 @@ Introduction to LINQ
 Working with database
 Web app using ASP.NET
 ```
+
+### Connected VS Disconnected Architecture
+
+| Feature             | Connected (`DataReader`)      | Disconnected (`DataAdapter` + `DataTable`) |
+| ------------------- | ----------------------------- | ------------------------------------------ |
+| Connection lifetime | Long (until data is read)     | Short (only during fill)                   |
+| Data accessibility  | Only during connection        | Persisted in memory                        |
+| Performance         | Faster for large, quick reads | Better for flexibility and offline use     |
+| Memory usage        | Low                           | Higher                                     |
+| Usability           | Simple reads only             | Editable, bindable, sortable               |
