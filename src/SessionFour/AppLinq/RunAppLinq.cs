@@ -12,20 +12,20 @@ public static class RunAppLinq {
     }
 
     public static void FilterEmployee() {
-        List<Employee> employees = [
-            new Employee(1, "Alice", "123 Main St", 12000),
-            new Employee(2, "Bob", "456 Elm St", 9500),
-            new Employee(3, "Charlie", "789 Oak St", 15000),
-            new Employee(4, "David", "101 Maple St", 8000)
+        List<EmployeeModel> employees = [
+            new EmployeeModel(1, "Alice", 12000),
+            new EmployeeModel(2, "Bob", 9500),
+            new EmployeeModel(3, "Charlie", 15000),
+            new EmployeeModel(4, "David", 8000)
         ];
 
         var highSalaryEmployees = from e in employees
                                   where e.Salary > 10000
-                                  select new { e.Name, e.Address };
+                                  select new { e.Name, e.Salary };
 
-        Console.WriteLine("Name\t\tAddress");
+        Console.WriteLine("Name\t\tSalary");
         foreach (var emp in highSalaryEmployees) {
-            Console.WriteLine($"{emp.Name}\t\t{emp.Address}");
+            Console.WriteLine($"{emp.Name}\t\t{emp.Salary}");
         }
     }
 
@@ -59,5 +59,30 @@ public static class RunAppLinq {
         Console.Write("Union result >> ");
         foreach (string result in unionResult) Console.Write($"{result} ");
         Console.WriteLine();
+    }
+
+    public static void LinqJoin() {
+        List<EmployeeModel> employees = [
+            new EmployeeModel(1, "Alice", 12000),
+            new EmployeeModel(2, "Bob", 9500),
+            new EmployeeModel(3, "Charlie", 15000),
+            new EmployeeModel(4, "David", 8000)
+        ];
+
+        List<AddressModel> employeeAddress = [
+            new AddressModel(100, "Bhaktapur", 1, "Changunarayan"),
+            new AddressModel(101, "Kathmandu", 2, "Baneshwor"),
+            new AddressModel(102, "Lalitpur", 3, "Khumaltar"),
+            new AddressModel(103, "Illam", 4, "Kanyam"),
+        ];
+
+        var result = from emp in employees
+                     join add in employeeAddress on emp.Id equals add.EmployeeId
+                     where emp.Salary > 8000
+                     select new { emp.Name, emp.Salary, add.City, add.StreetName };
+
+        foreach (var item in result) {
+            Console.WriteLine($"{item.Name} earns {item.Salary} and lives in {item.City}, {item.StreetName}.");
+        }
     }
 }
