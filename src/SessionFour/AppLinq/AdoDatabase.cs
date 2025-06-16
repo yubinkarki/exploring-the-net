@@ -1,48 +1,56 @@
+// Using connected architecture (mostly) 
+
 namespace ExploringTheNet.src.SessionFour.AppLinq;
 
 using System;
+using System.Data;
 
-using MySql.Data.MySqlClient;
+using MySql.Data.MySqlClient; // dotnet add package MySql.Data
 
 public class AdoDatabase {
-    private const string ConnectionString = "Server=localhost;Database=TestDB;Uid=root;Pwd=your_password;";
+    private const string User = "root";
+    private const string Password = "";
+    private const string Database = "kct";
+    private const string TableName = "user";
+    private const string Server = "localhost";
 
-    public static void RunDatabase() {
+    private static readonly string ConnectionString = $"Server={Server};Database={Database};Uid={User};Pwd={Password};";
+
+    // Make sure table exists
+    public static void AllOperations() {
         EnsureTableExists();
-
-        // CreateUser("Hari Om", "hariom@gmail.com");
-        // ReadUsers();
-        UpdateUser(1, "Radhe Krishna", "radhekrishna@gmail.com");
+        // CreateUser("Ram Kumar", "ram@gmail.com");
+        // UpdateUser(1, "Ram Kumar", "ram@gmail.com");
         // DeleteUser(1);
-
-        Console.WriteLine("Done.");
+        ReadUsers();
     }
 
     private static void EnsureTableExists() {
-        using MySqlConnection conn = new(ConnectionString);
+        MySqlConnection conn = new(ConnectionString);
 
-        const string query = @"CREATE TABLE IF NOT EXISTS Users (
+        const string query = $@"CREATE TABLE IF NOT EXISTS {TableName}(
                         Id INT AUTO_INCREMENT PRIMARY KEY,
                         Name VARCHAR(100),
-                        Email VARCHAR(100));";
+                        Email VARCHAR(100)
+                        );";
 
-        using MySqlCommand cmd = new MySqlCommand(query, conn);
+        MySqlCommand cmd = new MySqlCommand(query, conn);
 
         try {
             conn.Open();
             cmd.ExecuteNonQuery();
-            Console.WriteLine("Checked for table existence and created if not existing.");
-        } catch (MySqlException ex) {
-            Console.WriteLine("An error occurred while ensuring table exists: " + ex.Message);
+            Console.WriteLine("Table verified.");
+        } catch (MySqlException e) {
+            Console.WriteLine("An error occurred while ensuring table exists: " + e.Message);
         }
     }
 
     private static void CreateUser(string name, string email) {
-        using MySqlConnection conn = new(ConnectionString);
+        MySqlConnection conn = new(ConnectionString);
 
-        const string query = "INSERT INTO Users (Name, Email) VALUES (@Name, @Email);";
+        const string query = $"INSERT INTO {TableName} (Name, Email) VALUES (@Name, @Email);";
 
-        using MySqlCommand cmd = new MySqlCommand(query, conn);
+        MySqlCommand cmd = new MySqlCommand(query, conn);
 
         cmd.Parameters.AddWithValue("@Name", name);
         cmd.Parameters.AddWithValue("@Email", email);
@@ -51,40 +59,68 @@ public class AdoDatabase {
             conn.Open();
             int result = cmd.ExecuteNonQuery();
 
-            Console.WriteLine(result > 0 ? "User created successfully." : "Error occurred while creating user.");
-        } catch (MySqlException ex) {
-            Console.WriteLine("An error occurred while creating user: " + ex.Message);
+            Console.WriteLine(result > 0 ? "User created successfully." : "User creation failed.");
+        } catch (MySqlException e) {
+            Console.WriteLine("An error occurred while creating user: " + e.Message);
         }
     }
 
-    // Read (Select) Operation
-    private static void ReadUsers() {
+    /* private static void ReadUsers() {
         using MySqlConnection conn = new(ConnectionString);
 
-        const string query = "SELECT * FROM Users;";
+        const string query = $"SELECT * FROM {TableName};";
 
         using MySqlCommand cmd = new(query, conn);
+
         try {
             conn.Open();
 
             using MySqlDataReader reader = cmd.ExecuteReader();
-            Console.WriteLine("Id\tName\t\tEmail");
-            Console.WriteLine("-----------------------------------------");
 
-            while (reader.Read()) {
-                Console.WriteLine($"{reader["Id"]}\t{reader["Name"]}\t{reader["Email"]}");
+            if (reader.HasRows) {
+                Console.WriteLine("\n🆔 Id\t\t👤 Name\t\t📨 Email");
+                Console.WriteLine("---------------------------------------------------");
+
+                // Keeps the connection open during reading
+                while (reader.Read()) {
+                    Console.WriteLine($"{reader["Id"]}\t\t{reader["Name"]}\t{reader["Email"]}");
+                }
             }
-        } catch (MySqlException ex) {
-            Console.WriteLine("An error occurred while reading users: " + ex.Message);
+        } catch (MySqlException e) {
+            Console.WriteLine("An error occurred while reading users: " + e.Message);
+        }
+    } */
+
+    // Disconnected architecture - using data adapter + data table
+    private static void ReadUsers() {
+        MySqlConnection conn = new(ConnectionString);
+        const string query = $"SELECT * FROM {TableName};";
+
+        try {
+            conn.Open();
+
+            MySqlDataAdapter adapter = new(query, conn);
+            DataTable dataTable = new();
+            adapter.Fill(dataTable); // Connection opens and closes internally
+
+            if (dataTable.Rows.Count > 0) {
+                Console.WriteLine("\n🆔 Id\t👤 Name\t\t📨 Email");
+                Console.WriteLine("---------------------------------------------------");
+
+                foreach (DataRow row in dataTable.Rows) {
+                    Console.WriteLine($"{row["Id"]}\t{row["Name"]}\t{row["Email"]}");
+                }
+            }
+        } catch (MySqlException e) {
+            Console.WriteLine("An error occurred while reading users: " + e.Message);
         }
     }
 
-    // Update Operation
     private static void UpdateUser(int id, string name, string email) {
-        using MySqlConnection conn = new(ConnectionString);
-        const string query = "UPDATE Users SET Name = @Name, Email = @Email WHERE Id = @Id;";
+        MySqlConnection conn = new(ConnectionString);
+        const string query = $"UPDATE {TableName} SET Name = @Name, Email = @Email WHERE Id = @Id;";
 
-        using MySqlCommand cmd = new MySqlCommand(query, conn);
+        MySqlCommand cmd = new MySqlCommand(query, conn);
         cmd.Parameters.AddWithValue("@Id", id);
         cmd.Parameters.AddWithValue("@Name", name);
         cmd.Parameters.AddWithValue("@Email", email);
@@ -94,17 +130,16 @@ public class AdoDatabase {
             int result = cmd.ExecuteNonQuery();
 
             Console.WriteLine(result > 0 ? "User updated successfully." : "No user found with the given Id.");
-        } catch (MySqlException ex) {
-            Console.WriteLine("An error occurred while updating user: " + ex.Message);
+        } catch (MySqlException e) {
+            Console.WriteLine("An error occurred while updating user: " + e.Message);
         }
     }
 
-    // Delete Operation
     private static void DeleteUser(int id) {
-        using MySqlConnection conn = new(ConnectionString);
-        const string query = "DELETE FROM Users WHERE Id = @Id;";
+        MySqlConnection conn = new(ConnectionString);
+        const string query = $"DELETE FROM {TableName} WHERE Id = @Id;";
 
-        using MySqlCommand cmd = new(query, conn);
+        MySqlCommand cmd = new(query, conn);
         cmd.Parameters.AddWithValue("@Id", id);
 
         try {
@@ -112,8 +147,8 @@ public class AdoDatabase {
             int result = cmd.ExecuteNonQuery();
 
             Console.WriteLine(result > 0 ? "User deleted successfully." : "No user found with the given Id.");
-        } catch (MySqlException ex) {
-            Console.WriteLine("An error occurred while deleting user: " + ex.Message);
+        } catch (MySqlException e) {
+            Console.WriteLine("An error occurred while deleting user: " + e.Message);
         }
     }
 }
