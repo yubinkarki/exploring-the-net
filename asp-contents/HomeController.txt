@@ -1,0 +1,32 @@
+Controllers > HomeController.cs
+
+namespace bca_asp_dotnet.Controllers;
+
+using System.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
+
+using bca_asp_dotnet.Models;
+
+public class HomeController() : Controller {
+    public IActionResult Index() => View();
+
+    public IActionResult Privacy() => View();
+
+    public IActionResult Contact() => View();
+
+    [HttpPost]
+    public IActionResult UserDetail(IFormCollection form) {
+        var model = new UserModel {
+            Hobbies = [.. form["hobbies"]],
+            Name = form["name"].ToString() ?? "N/A",
+            Gender = form["gender"].ToString() ?? "N/A",
+            Address = form["address"].ToString() ?? "N/A",
+            Program = form["program"].ToString() ?? "N/A",
+        };
+
+        return View("UserDetail", model);
+    }
+
+    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+    public IActionResult Error() => View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+}
