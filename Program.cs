@@ -28,7 +28,8 @@ public class Program {
         } else {
             Console.WriteLine($"{AppString.RunWithoutArgument}");
             Console.WriteLine(AppString.Separator);
-            RunAppControl.RunIteration();
+            // RunAppLinq.GetStats();
+            AdoDatabase.AllOperations();
             Console.WriteLine(AppString.Separator);
         }
     }
