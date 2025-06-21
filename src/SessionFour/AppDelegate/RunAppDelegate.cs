@@ -1,4 +1,4 @@
-// A delegate is a type that represents references to methods
+// A delegate is an object that represents references to methods
 
 namespace ExploringTheNet.src.SessionFour.AppDelegate;
 
@@ -24,9 +24,13 @@ public class RunAppDelegate {
 
         int multicastResult = multicast(2, 2);
         Console.WriteLine($"Multicast result = {multicastResult}");
+
+        // Calling the below method with the callback argument
+        RunFuncDelegate(AddNumbers);
     }
 
-    public static void RunFuncDelegate() {
+    // Accepting a callback parameter | Function and Action delegates
+    public static void RunFuncDelegate(MathDelegate addCallback) {
         Func<int, int, int> addDelegate = MathOperations.Add;
         int addResult = addDelegate(5, 10);
         Console.WriteLine($"Addition result = {addResult}");
@@ -36,6 +40,6 @@ public class RunAppDelegate {
         greet("Yubin");
 
         // Calling the anonymous function
-        AddNumbers(10, 10);
+        addCallback(10, 10);
     }
 }
