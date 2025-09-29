@@ -26,7 +26,7 @@ public class Animal {
     }
 
     // Parameterized constructor
-    public Animal(string name, uint age, string species) {
+    public Animal(string name, uint age, string? species) {
         _age = age;
         _name = name;
         _species = species ?? "N/A";
