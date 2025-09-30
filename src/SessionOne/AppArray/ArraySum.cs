@@ -4,14 +4,14 @@ using System;
 
 public static class ArraySum {
     public static void Run() {
-        int totalNumber, sum = 0;
+        int sum = 0;
         int[] numbersToAdd = new int[5];
 
         Console.Write("Enter the number of elements (5 max): ");
         string totalNumberInput = Console.ReadLine() ?? string.Empty; // Taking input from user
 
         // Handle more than max number case
-        if (!int.TryParse(totalNumberInput, out totalNumber)) {
+        if (!int.TryParse(totalNumberInput, out int totalNumber)) {
             Console.WriteLine("\n❌ Invalid input. Please enter a valid number.");
             return;
         }

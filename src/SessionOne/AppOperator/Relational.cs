@@ -4,8 +4,8 @@ using System;
 
 public static class Relational {
     public static void Run() {
-        int primary = 10;
-        int secondary = 20;
+        const int primary = 10;
+        const int secondary = 20;
 
         bool isEqual = primary == secondary;
         bool isNotEqual = primary != secondary;

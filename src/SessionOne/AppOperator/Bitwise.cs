@@ -4,8 +4,8 @@ using System;
 
 public static class Bitwise {
     public static void Run() {
-        int primary = 60; // 111100
-        int secondary = 13; // 1101
+        const int primary = 60; // 111100
+        const int secondary = 13; // 1101
 
         Console.WriteLine($"{primary} = {Convert.ToString(primary, 2)}");
         Console.WriteLine($"{secondary} = {Convert.ToString(secondary, 2)}");

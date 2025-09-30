@@ -14,10 +14,10 @@ public static class Character {
         string fullName = firstName + " " + lastName + " " + numOne;
         bool resultName = firstName == lastName;
 
-        Console.WriteLine("Result of comparison " + firstName.CompareTo(lastName));
+        Console.WriteLine("Result of comparison " + string.Compare(firstName, lastName, StringComparison.Ordinal));
 
         // firstName is larger/smaller/equal => 1/-1/0
-        if (firstName.CompareTo(lastName) == 0) {
+        if (string.Compare(firstName, lastName, StringComparison.Ordinal) == 0) {
             Console.WriteLine("First name is equal to last name");
         }
 

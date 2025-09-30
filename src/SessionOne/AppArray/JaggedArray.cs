@@ -4,11 +4,11 @@ using System;
 
 public static class JaggedArray {
     public static void Run() {
-        int[][] numbers = new int[3][] {
+        int[][] numbers = [
             [1, 2, 3],
             [4, 5],
             [7],
-        };
+        ];
 
         char[][] letters = [
             ['a', 'e', 'i', 'o', 'u'],

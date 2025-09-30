@@ -17,7 +17,7 @@ public static class NumberConversion {
         Type intType = typeof(int);
 
         // Checking before conversion from big value to small value
-        if (numTwo >= short.MinValue && numTwo <= short.MaxValue) {
+        if (numTwo is >= short.MinValue and <= short.MaxValue) {
             numFour = (short)numTwo;
             Console.WriteLine("numTwo type casting into short successful");
         }

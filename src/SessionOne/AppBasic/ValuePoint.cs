@@ -9,8 +9,7 @@ public class ValuePoint {
 
 public class CopyByValue {
     public static void Run() {
-        ValuePoint pointOne = new ValuePoint();
-        pointOne.X = 10;
+        ValuePoint pointOne = new() { X = 10 };
 
         ValuePoint pointTwo = pointOne; // Assigning a copy/reference of pointOne to pointTwo
 

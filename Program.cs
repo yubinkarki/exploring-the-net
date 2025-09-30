@@ -20,7 +20,7 @@ using src.SessionFour.AppLinq;
 using src.SessionFour.AppDelegate;
 using src.SessionFour.AppException;
 
-public class Program {
+public static class Program {
     private static void Main(string[] args) {
         if (args.Length > 0) {
             string combinedArgs = string.Join(", ", args);
@@ -29,7 +29,7 @@ public class Program {
             Console.WriteLine($"{AppString.RunWithoutArgument}");
             Console.WriteLine(AppString.Separator);
             // RunAppLinq.GetStats();
-            AdoDatabase.AllOperations();
+            RunAppPoly.RunArrayList();
             Console.WriteLine(AppString.Separator);
         }
     }

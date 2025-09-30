@@ -1,19 +1,19 @@
 namespace ExploringTheNet.SessionOne.AppOperator;
 
 public class User {
-    private const int _age = 30;
-    private const bool _isMarried = true;
+    private const int Age = 30;
+    private const bool IsMarried = true;
 
-    public string? Name { get; set; }
+    public string? Name { get; init; }
     public Address? Address { get; set; }
 
     public void ShowInfo() {
-        System.Console.WriteLine($"Name: {Name}\nAge: {_age}\nIsMarried: {_isMarried}");
+        System.Console.WriteLine($"Name: {Name}\nAge: {Age}\nIsMarried: {IsMarried}");
     }
 }
 
 public class Address {
-    public string? Street { get; set; }
+    public string? Street { get; init; }
 
     public void ShowInfo() {
         System.Console.WriteLine($"This is inside Address");
@@ -43,10 +43,10 @@ public static class Miscellaneous {
         System.Console.WriteLine("'year' address in memory = " + (int)yearPtr);
         System.Console.WriteLine("'year' value in memory = " + *yearPtr);
 
-        User john = new User();
+        User? john = new();
 
         // Exercise 1.1
-        if (john is User) {
+        if (john is not null) {
             System.Console.WriteLine($"\ntype of john is {typeof(User)}");
             john.ShowInfo();
         }
@@ -63,10 +63,6 @@ public static class Miscellaneous {
 
     // Exercise 1.2
     private static int CheckMax(int a, int b) {
-        // if (a > b) {
-        //     return a;
-        // } else return b;
-
         return a > b ? a : b;
     }
 }
