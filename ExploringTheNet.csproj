@@ -4,7 +4,7 @@
         <Nullable>enable</Nullable>
         <OutputType>Exe</OutputType>
         <ImplicitUsings>disable</ImplicitUsings>
-        <TargetFramework>net8.0</TargetFramework>
+        <TargetFramework>net10.0</TargetFramework>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
         <NoWarn>IDE0130;CS0168;CS0169;CS0649;IDE0051;CA1822;CS0414</NoWarn>
@@ -12,6 +12,6 @@
 
     <ItemGroup>
         <Folder Include="src\" />
-        <PackageReference Include="MySql.Data" Version="9.3.0" />
+        <PackageReference Include="MySql.Data" Version="9.6.0" />
     </ItemGroup>
 </Project>
