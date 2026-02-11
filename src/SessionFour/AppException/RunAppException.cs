@@ -1,6 +1,6 @@
 // try catch finally throw
 
-namespace ExploringTheNet.src.SessionFour.AppException;
+namespace ExploringTheNet.SessionFour.AppException;
 
 using System;
 

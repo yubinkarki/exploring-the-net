@@ -1,4 +1,4 @@
-namespace ExploringTheNet.src.SessionFour.AppLinq;
+namespace ExploringTheNet.SessionFour.AppLinq;
 
 public class EmployeeModel {
     public int Id { get; set; }

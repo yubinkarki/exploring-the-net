@@ -1,6 +1,6 @@
 // Using connected architecture (mostly) 
 
-namespace ExploringTheNet.src.SessionFour.AppLinq;
+namespace ExploringTheNet.SessionFour.AppLinq;
 
 using System;
 using System.Data;

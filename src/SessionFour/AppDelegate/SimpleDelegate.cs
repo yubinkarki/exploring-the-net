@@ -1,4 +1,4 @@
-namespace ExploringTheNet.src.SessionFour.AppDelegate;
+namespace ExploringTheNet.SessionFour.AppDelegate;
 
 using System;
 

@@ -1,4 +1,4 @@
-namespace ExploringTheNet.src.SessionFour.AppLinq;
+namespace ExploringTheNet.SessionFour.AppLinq;
 
 public class AddressModel {
     public int Id { get; set; }

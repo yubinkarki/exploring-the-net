@@ -1,6 +1,6 @@
 // LINQ is a uniform query syntax to retrieve data from different sources
 
-namespace ExploringTheNet.src.SessionFour.AppLinq;
+namespace ExploringTheNet.SessionFour.AppLinq;
 
 using System;
 using System.Linq;

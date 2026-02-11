@@ -1,4 +1,4 @@
-namespace ExploringTheNet.src.SessionFour.AppException;
+namespace ExploringTheNet.SessionFour.AppException;
 
 using System;
 

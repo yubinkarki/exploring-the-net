@@ -1,4 +1,4 @@
-namespace ExploringTheNet.src.SessionFour.AppLinq;
+namespace ExploringTheNet.SessionFour.AppLinq;
 
 using System;
 using System.Linq;

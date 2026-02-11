@@ -16,9 +16,9 @@ using SessionThree.AppPoly;
 using SessionThree.AppClass;
 using SessionThree.AppInterface;
 
-using src.SessionFour.AppLinq;
-using src.SessionFour.AppDelegate;
-using src.SessionFour.AppException;
+using SessionFour.AppLinq;
+using SessionFour.AppDelegate;
+using SessionFour.AppException;
 
 public static class Program {
     private static void Main(string[] args) {

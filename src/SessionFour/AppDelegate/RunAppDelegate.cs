@@ -1,6 +1,6 @@
 // A delegate is an object that represents references to methods
 
-namespace ExploringTheNet.src.SessionFour.AppDelegate;
+namespace ExploringTheNet.SessionFour.AppDelegate;
 
 using System;
 
